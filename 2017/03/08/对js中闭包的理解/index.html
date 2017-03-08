@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>刘昊 技术笔记</title>
+  <title>对js中闭包的理解 | 刘昊 技术笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="永远在路上">
-<meta property="og:type" content="website">
-<meta property="og:title" content="刘昊 技术笔记">
-<meta property="og:url" content="http://liuhaoer.github.io/index.html">
+  <meta name="description" content="通过几个实例程序对js中闭包的理解12345678910function outer&amp;#123;  var a = 1;  function inner&amp;#123;    console.log(a);  &amp;#125;  return inner;&amp;#125;var inn = outer();inn();			//a=1
+这段代码是最经典闭包案例。我们在全局作用域中实现了对嵌套函数(inner)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="对js中闭包的理解">
+<meta property="og:url" content="http://liuhaoer.github.io/2017/03/08/对js中闭包的理解/index.html">
 <meta property="og:site_name" content="刘昊 技术笔记">
-<meta property="og:description" content="永远在路上">
+<meta property="og:description" content="通过几个实例程序对js中闭包的理解12345678910function outer&amp;#123;  var a = 1;  function inner&amp;#123;    console.log(a);  &amp;#125;  return inner;&amp;#125;var inn = outer();inn();			//a=1
+这段代码是最经典闭包案例。我们在全局作用域中实现了对嵌套函数(inner)">
+<meta property="og:updated_time" content="2017-03-08T14:30:38.155Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="刘昊 技术笔记">
-<meta name="twitter:description" content="永远在路上">
+<meta name="twitter:title" content="对js中闭包的理解">
+<meta name="twitter:description" content="通过几个实例程序对js中闭包的理解12345678910function outer&amp;#123;  var a = 1;  function inner&amp;#123;    console.log(a);  &amp;#125;  return inner;&amp;#125;var inn = outer();inn();			//a=1
+这段代码是最经典闭包案例。我们在全局作用域中实现了对嵌套函数(inner)">
   
   
     <link rel="icon" href="/favicon.png">
@@ -95,11 +99,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-
-    
-    <article id="post-对js中闭包的理解" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-对js中闭包的理解" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/03/08/对js中闭包的理解/" class="article-date">
   <time datetime="2017-03-08T13:52:23.000Z" itemprop="datePublished">2017-03-08</time>
@@ -112,8 +112,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/08/对js中闭包的理解/">对js中闭包的理解</a>
+    <h1 class="article-title" itemprop="name">
+      对js中闭包的理解
     </h1>
   
 
@@ -151,53 +151,20 @@
     </footer>
   </div>
   
-</article>
-
-
     
+<nav id="article-nav">
   
-
-    
-    <article id="post-demo" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/06/demo/" class="article-date">
-  <time datetime="2017-03-06T10:59:37.000Z" itemprop="datePublished">2017-03-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/06/demo/">demo</a>
-    </h1>
+    <a href="/2017/03/06/demo/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">demo</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="测试从公司的mac迁移到自己的电脑上。"><a href="#测试从公司的mac迁移到自己的电脑上。" class="headerlink" title="测试从公司的mac迁移到自己的电脑上。"></a>测试从公司的mac迁移到自己的电脑上。</h5>
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://liuhaoer.github.io/2017/03/06/demo/" data-id="cj0127t260000uonshf2ld0z8" class="article-share-link">分享到</a>
-      
-
-      
-    </footer>
-  </div>
   
 </article>
 
-
-    
-  
-  
 </section>
         
       </div>
