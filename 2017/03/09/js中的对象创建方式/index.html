@@ -3,17 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>刘昊 技术笔记</title>
+  <title>js中的对象创建方式 | 刘昊 技术笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="永远在路上">
-<meta property="og:type" content="website">
-<meta property="og:title" content="刘昊 技术笔记">
-<meta property="og:url" content="http://liuhaoer.github.io/index.html">
+  <meta name="description" content="js中的对象创建方式在js中创建对象有多种方式，在这里稍作总结。
+
+字面量：
+12345var people = &amp;#123;  name:&quot;xiaoming&quot;,  age:18,  sex:&quot;男&quot;&amp;#125;;
+这种方式是最直观的对象创建方式，且这种创建方式的对象封装性体现较好，在实际开发中使用这种方式较多。而且这种对象和JSON格式相似。
+12345var people = &amp;#123;  &quot;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js中的对象创建方式">
+<meta property="og:url" content="http://liuhaoer.github.io/2017/03/09/js中的对象创建方式/index.html">
 <meta property="og:site_name" content="刘昊 技术笔记">
-<meta property="og:description" content="永远在路上">
+<meta property="og:description" content="js中的对象创建方式在js中创建对象有多种方式，在这里稍作总结。
+
+字面量：
+12345var people = &amp;#123;  name:&quot;xiaoming&quot;,  age:18,  sex:&quot;男&quot;&amp;#125;;
+这种方式是最直观的对象创建方式，且这种创建方式的对象封装性体现较好，在实际开发中使用这种方式较多。而且这种对象和JSON格式相似。
+12345var people = &amp;#123;  &quot;">
+<meta property="og:updated_time" content="2017-03-09T14:28:49.684Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="刘昊 技术笔记">
-<meta name="twitter:description" content="永远在路上">
+<meta name="twitter:title" content="js中的对象创建方式">
+<meta name="twitter:description" content="js中的对象创建方式在js中创建对象有多种方式，在这里稍作总结。
+
+字面量：
+12345var people = &amp;#123;  name:&quot;xiaoming&quot;,  age:18,  sex:&quot;男&quot;&amp;#125;;
+这种方式是最直观的对象创建方式，且这种创建方式的对象封装性体现较好，在实际开发中使用这种方式较多。而且这种对象和JSON格式相似。
+12345var people = &amp;#123;  &quot;">
   
   
     <link rel="icon" href="/favicon.png">
@@ -95,11 +111,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-
-    
-    <article id="post-js中的对象创建方式" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-js中的对象创建方式" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/03/09/js中的对象创建方式/" class="article-date">
   <time datetime="2017-03-09T13:47:34.000Z" itemprop="datePublished">2017-03-09</time>
@@ -112,8 +124,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/09/js中的对象创建方式/">js中的对象创建方式</a>
+    <h1 class="article-title" itemprop="name">
+      js中的对象创建方式
     </h1>
   
 
@@ -154,112 +166,20 @@
     </footer>
   </div>
   
-</article>
-
-
     
+<nav id="article-nav">
   
-
-    
-    <article id="post-对js中闭包的理解" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/08/对js中闭包的理解/" class="article-date">
-  <time datetime="2017-03-08T13:52:23.000Z" itemprop="datePublished">2017-03-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/08/对js中闭包的理解/">对js中闭包的理解</a>
-    </h1>
+    <a href="/2017/03/08/对js中闭包的理解/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">对js中闭包的理解</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="通过几个实例程序对js中闭包的理解"><a href="#通过几个实例程序对js中闭包的理解" class="headerlink" title="通过几个实例程序对js中闭包的理解"></a>通过几个实例程序对js中闭包的理解</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span></span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">inner</span></span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(a);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> inner;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> inn = outer();</div><div class="line">inn();			<span class="comment">//a=1</span></div></pre></td></tr></table></figure>
-<p>这段代码是最经典闭包案例。我们在全局作用域中实现了对嵌套函数inner()的调用，以及容器函数outer()作用域中变量a的访问。</p>
-<p>上述代码还有几种写法如下:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span></span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">  <span class="keyword">var</span> inner = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(a);</div><div class="line">  &#125;;</div><div class="line">  <span class="keyword">return</span> inner;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> inn = outer();</div><div class="line">inn();      <span class="comment">//a=1</span></div></pre></td></tr></table></figure>
-<p>这种写法看上去更容易理解，在outer函数中，我们将嵌套函数引用返回出去，这样我们就能在全局作用域中访问。</p>
-<p>终极写法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span></span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(a);</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> inn = outer();</div><div class="line">inn();		<span class="comment">//a=1</span></div></pre></td></tr></table></figure>
-<p>以上几种写法表达的都是一个意思。</p>
-<p>再看一个demo:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> inner;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">  inner = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(a);</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line">outer();</div><div class="line">inner();	<span class="comment">//a=1</span></div></pre></td></tr></table></figure>
-<p>通过这个例子，我们可以更加清晰的看到，声明在外层作用域中的函数引用inner居然可以访问到outer()中的变量a。看起来跟js中作用域的规则背道而驰。</p>
-<p>end:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span>(<span class="params">a</span>)</span>&#123;</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">inner</span>(<span class="params">b</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(a+b);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> inner;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> inn = outer(<span class="number">2</span>);</div><div class="line">inn(<span class="number">3</span>);	<span class="comment">//result=5</span></div></pre></td></tr></table></figure>
-<p>在这里借用别人对闭包的总结，理解起来十分贴切：</p>
-<blockquote>
-<p>每个函数都是一个闭包，无论它在何处被调用，<code>它总是能访问它定义时所处作用域中的全部变量。</code></p>
-<p>闭包天生存在，并不需要什么特殊的结构才存在。只不过我们必须要刻意地把函数放到其他的作用域中调用才能明显的观察到闭包性质。</p>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://liuhaoer.github.io/2017/03/08/对js中闭包的理解/" data-id="cj02hogsi0002asnsuuvd1e7r" class="article-share-link">分享到</a>
-      
-
-      
-    </footer>
-  </div>
   
 </article>
 
-
-    
-  
-
-    
-    <article id="post-demo" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/06/demo/" class="article-date">
-  <time datetime="2017-03-06T10:59:37.000Z" itemprop="datePublished">2017-03-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/06/demo/">demo</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="测试从公司的mac迁移到自己的电脑上。"><a href="#测试从公司的mac迁移到自己的电脑上。" class="headerlink" title="测试从公司的mac迁移到自己的电脑上。"></a>测试从公司的mac迁移到自己的电脑上。</h5>
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://liuhaoer.github.io/2017/03/06/demo/" data-id="cj02hogs20000asnspyoh92t6" class="article-share-link">分享到</a>
-      
-
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-    
-  
-  
 </section>
         
       </div>
