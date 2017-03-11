@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>js中标准的原型式继承写法 | My Blog | Andorid/JavaScript/Python</title>
+
+  
+  <meta name="author" content="liuhao">
+  
+
+  
+  <meta name="description" content="js中标准的原型式继承写法在JavaScript中，继承是通过原型来实现的，而并不像Java等其他语言有如extends关键字。在JavaScript中，原型，原型对象，原型链都是比较重要且不容易理解的概念。所以这篇主要用来记录一下标准的原型式继承的写法。
+直接上代码：
+12345678910111">
+  
+
+  
+  
+  <meta name="keywords" content="">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="js中标准的原型式继承写法"/>
+
+  <meta property="og:site_name" content="My Blog"/>
+
+  
+  <meta property="og:image" content="/favicon.ico"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="My Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">My Blog</a>
+    </h1>
+    <p class="site-description">Andorid/JavaScript/Python</p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">主页</a></li>
+      
+        <li><a href="/archives">归档</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>js中标准的原型式继承写法</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/03/11/js中标准的原型式继承写法/" rel="bookmark">
+        <time class="entry-date published" datetime="2017-03-11T13:54:52.000Z">
+          2017-03-11
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h5 id="js中标准的原型式继承写法"><a href="#js中标准的原型式继承写法" class="headerlink" title="js中标准的原型式继承写法"></a>js中标准的原型式继承写法</h5><p>在JavaScript中，继承是通过原型来实现的，而并不像Java等其他语言有如extends关键字。在JavaScript中，原型，原型对象，原型链都是比较重要且不容易理解的概念。所以这篇主要用来记录一下标准的原型式继承的写法。</p>
+<p>直接上代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">People</span>(<span class="params">name,age,sex</span>)</span>&#123;</div><div class="line">  <span class="keyword">this</span>.name = name;</div><div class="line">  <span class="keyword">this</span>.age = age;</div><div class="line">  <span class="keyword">this</span>.sex = sex;</div><div class="line">&#125;</div><div class="line"></div><div class="line">People.prototype.shwoInfo()&#123;</div><div class="line">  alert(<span class="string">'My name is'</span>+<span class="keyword">this</span>.name);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name,age,sex,schoolName,number</span>)</span>&#123;</div><div class="line">  People(<span class="keyword">this</span>,<span class="built_in">arguments</span>);</div><div class="line">  <span class="keyword">this</span>.schoolName = schoolName;</div><div class="line">  <span class="keyword">this</span>.number = number;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 关键代码</span></div><div class="line">Student.prototype = <span class="keyword">new</span> People();</div><div class="line">Student.prototype.doHomework = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  alert(<span class="string">'do homework...'</span>);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> student = <span class="keyword">new</span> Student(<span class="string">'xiaoming'</span>,<span class="number">9</span>,<span class="string">'男'</span>,<span class="string">'朝阳小学'</span>,<span class="number">20170001</span>);</div><div class="line">student.showInfo();</div><div class="line">student.doHomework();</div></pre></td></tr></table></figure>
+<p>其中，只有一行核心代码：</p>
+<p><code>Student.prototype = new People();</code></p>
+<p>在测试过程中，发现这样写也是可行的：</p>
+<p><code>Student.protoytpe = People.prototype;</code></p>
+<p>由于目前对原型的认识还比较粗浅，尚且不做具体分析。留待日后继续学习。</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2017 liuhao
+    
+  </p>
+</footer>
+    
+  </div>
+</div>
+</body>
+</html>
