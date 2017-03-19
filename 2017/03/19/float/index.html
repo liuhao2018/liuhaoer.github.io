@@ -3,21 +3,28 @@
 <head>
   <meta charset="utf-8">
   
-  <title>My Blog | Andorid/JavaScript/Python</title>
+  <title>CSS中浮动知识理解 | My Blog | Andorid/JavaScript/Python</title>
 
   
   <meta name="author" content="liuhao">
   
 
   
+  <meta name="description" content="CSS中关于浮动的学习对初学者来说，浮动相较于CSS中的其他知识是一个比较不容易弄清楚的内容。而掌握浮动又是我们在做网页布局的时候，无法避免的技术。今天下午对浮动进行了一下全面的学习，在此做一下总结。
+首先在CSS中，我们用float属性来表示，支持两种值：left,right。
+浮动的盒子会脱离文">
+  
 
+  
+  
+  <meta name="keywords" content="">
   
 
   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  
+  <meta property="og:title" content="CSS中浮动知识理解"/>
 
   <meta property="og:site_name" content="My Blog"/>
 
@@ -54,12 +61,11 @@
 </header>
 
     <main class="site-main posts-loop">
-    
-  <article>
+    <article>
 
   
     
-    <h3 class="article-title"><a href="/2017/03/19/float/"><span>CSS中浮动知识理解</span></a></h3>
+    <h3 class="article-title"><span>CSS中浮动知识理解</span></h3>
     
   
 
@@ -119,239 +125,6 @@
 </article>
 
 
-
-  <article>
-
-  
-    
-    <h3 class="article-title"><a href="/2017/03/11/js中标准的原型式继承写法/"><span>js中标准的原型式继承写法</span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2017/03/11/js中标准的原型式继承写法/" rel="bookmark">
-        <time class="entry-date published" datetime="2017-03-11T13:54:52.000Z">
-          2017-03-11
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <h5 id="js中标准的原型式继承写法"><a href="#js中标准的原型式继承写法" class="headerlink" title="js中标准的原型式继承写法"></a>js中标准的原型式继承写法</h5><p>在JavaScript中，继承是通过原型来实现的，而并不像Java等其他语言有如extends关键字。在JavaScript中，原型，原型对象，原型链都是比较重要且不容易理解的概念。所以这篇主要用来记录一下标准的原型式继承的写法。</p>
-<p>直接上代码：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">People</span>(<span class="params">name,age,sex</span>)</span>&#123;</div><div class="line">  <span class="keyword">this</span>.name = name;</div><div class="line">  <span class="keyword">this</span>.age = age;</div><div class="line">  <span class="keyword">this</span>.sex = sex;</div><div class="line">&#125;</div><div class="line"></div><div class="line">People.prototype.shwoInfo()&#123;</div><div class="line">  alert(<span class="string">'My name is'</span>+<span class="keyword">this</span>.name);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name,age,sex,schoolName,number</span>)</span>&#123;</div><div class="line">  People.apply(<span class="keyword">this</span>,<span class="built_in">arguments</span>);</div><div class="line">  <span class="keyword">this</span>.schoolName = schoolName;</div><div class="line">  <span class="keyword">this</span>.number = number;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 关键代码</span></div><div class="line">Student.prototype = <span class="keyword">new</span> People();</div><div class="line">Student.prototype.doHomework = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  alert(<span class="string">'do homework...'</span>);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> student = <span class="keyword">new</span> Student(<span class="string">'xiaoming'</span>,<span class="number">9</span>,<span class="string">'男'</span>,<span class="string">'朝阳小学'</span>,<span class="number">20170001</span>);</div><div class="line">student.showInfo();</div><div class="line">student.doHomework();</div></pre></td></tr></table></figure>
-<p>其中，只有一行核心代码：</p>
-<p><code>Student.prototype = new People();</code></p>
-<p>在测试过程中，发现这样写也是可行的：</p>
-<p><code>Student.protoytpe = People.prototype;</code></p>
-<p>由于目前对原型的认识还比较粗浅，尚且不做具体分析。留待日后继续学习。</p>
-
-      
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-  <article>
-
-  
-    
-    <h3 class="article-title"><a href="/2017/03/09/js中的对象创建方式/"><span>js中的对象创建方式</span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2017/03/09/js中的对象创建方式/" rel="bookmark">
-        <time class="entry-date published" datetime="2017-03-09T13:47:34.000Z">
-          2017-03-09
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <h5 id="js中的对象创建方式"><a href="#js中的对象创建方式" class="headerlink" title="js中的对象创建方式"></a>js中的对象创建方式</h5><p>在js中创建对象有多种方式，在这里稍作总结。</p>
-<ul>
-<li><p>字面量：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> people = &#123;</div><div class="line">  <span class="attr">name</span>:<span class="string">"xiaoming"</span>,</div><div class="line">  <span class="attr">age</span>:<span class="number">18</span>,</div><div class="line">  <span class="attr">sex</span>:<span class="string">"男"</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<p>这种方式是最直观的对象创建方式，且这种创建方式的对象封装性体现较好，在实际开发中使用这种方式较多。而且这种对象和JSON格式相似。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> people = &#123;</div><div class="line">  <span class="string">"name"</span>:<span class="string">"xiaoming"</span>,</div><div class="line">  <span class="string">"age"</span>:<span class="number">18</span>,</div><div class="line">  <span class="string">"sex"</span>:<span class="string">"男"</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<p>可以看出，它们唯一的区别就是JSON数据的key必须<code>加引号</code>。</p>
-</li>
-<li><p>Object：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> people = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">people.name = <span class="string">"xiaoming"</span>;</div><div class="line">people.age = <span class="number">18</span>;</div><div class="line">people.sex = <span class="string">"男"</span>;</div></pre></td></tr></table></figure>
-</li>
-<li><p>构造函数：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">People</span>(<span class="params">name,age,sex</span>)</span>&#123;</div><div class="line">  <span class="keyword">this</span>.name = name;</div><div class="line">  <span class="keyword">this</span>.age = age;</div><div class="line">  <span class="keyword">this</span>.sex = sex;</div><div class="line"><span class="keyword">var</span> people = <span class="keyword">new</span> People(<span class="string">"xiaoming"</span>,<span class="number">18</span>,<span class="string">"男"</span>);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>需要注意的是，JavaScript并不是一个面向对象的语言，而是一个基于对象的语言。在JavaScript中，并没有类的概念。所以，并不存在如Java中有创建类的过程。</p>
-<p>下面看几个例子：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Mobile</span>(<span class="params">brand,memory,price</span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> m = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">  m.brand = brand;</div><div class="line">  m.memory = memory;</div><div class="line">  m.price = price;</div><div class="line">  <span class="keyword">return</span> m;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> m1 = <span class="keyword">new</span> Mobile(<span class="string">"小米"</span>,<span class="number">4</span>,<span class="number">1999</span>);</div><div class="line"><span class="keyword">var</span> m2 = Mobile(<span class="string">"小米"</span>,<span class="number">4</span>,<span class="number">1999</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(m1);</div><div class="line"><span class="built_in">console</span>.log(m2);</div></pre></td></tr></table></figure>
-<p>上面两种方式，一个通过new关键字创建，一个通过直接调用函数创建，得到的结果是一样的，殊途同归。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Mobile</span>(<span class="params">price</span>)</span>&#123;</div><div class="line">  <span class="keyword">this</span>.price = price;</div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.price);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> m = <span class="keyword">new</span> Mobile(<span class="number">1999</span>);</div></pre></td></tr></table></figure>
-<p>在创建对象后，控制台会输出price。这里需要说明的是，在JavaScript中，构造函数中的代码也是顺序执行的，这点跟普通函数一样。</p>
-
-      
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-  <article>
-
-  
-    
-    <h3 class="article-title"><a href="/2017/03/08/对js中闭包的理解/"><span>对js中闭包的理解</span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2017/03/08/对js中闭包的理解/" rel="bookmark">
-        <time class="entry-date published" datetime="2017-03-08T13:52:23.000Z">
-          2017-03-08
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <h5 id="通过几个实例程序对js中闭包的理解"><a href="#通过几个实例程序对js中闭包的理解" class="headerlink" title="通过几个实例程序对js中闭包的理解"></a>通过几个实例程序对js中闭包的理解</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span></span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">inner</span></span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(a);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> inner;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> inn = outer();</div><div class="line">inn();			<span class="comment">//a=1</span></div></pre></td></tr></table></figure>
-<p>这段代码是最经典闭包案例。我们在全局作用域中实现了对嵌套函数inner()的调用，以及容器函数outer()作用域中变量a的访问。</p>
-<p>上述代码还有几种写法如下:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span></span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">  <span class="keyword">var</span> inner = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(a);</div><div class="line">  &#125;;</div><div class="line">  <span class="keyword">return</span> inner;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> inn = outer();</div><div class="line">inn();      <span class="comment">//a=1</span></div></pre></td></tr></table></figure>
-<p>这种写法看上去更容易理解，在outer函数中，我们将嵌套函数引用返回出去，这样我们就能在全局作用域中访问。</p>
-<p>终极写法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span></span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(a);</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> inn = outer();</div><div class="line">inn();		<span class="comment">//a=1</span></div></pre></td></tr></table></figure>
-<p>以上几种写法表达的都是一个意思。</p>
-<p>再看一个demo:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> inner;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">  inner = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(a);</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line">outer();</div><div class="line">inner();	<span class="comment">//a=1</span></div></pre></td></tr></table></figure>
-<p>通过这个例子，我们可以更加清晰的看到，声明在外层作用域中的函数引用inner居然可以访问到outer()中的变量a。看起来跟js中作用域的规则背道而驰。</p>
-<p>end:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span>(<span class="params">a</span>)</span>&#123;</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">inner</span>(<span class="params">b</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(a+b);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> inner;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> inn = outer(<span class="number">2</span>);</div><div class="line">inn(<span class="number">3</span>);	<span class="comment">//result=5</span></div></pre></td></tr></table></figure>
-<p>在这里借用别人对闭包的总结，理解起来十分贴切：</p>
-<blockquote>
-<p>每个函数都是一个闭包，无论它在何处被调用，<code>它总是能访问它定义时所处作用域中的全部变量。</code></p>
-<p>闭包天生存在，并不需要什么特殊的结构才存在。只不过我们必须要刻意地把函数放到其他的作用域中调用才能明显的观察到闭包性质。</p>
-</blockquote>
-
-      
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-  <article>
-
-  
-    
-    <h3 class="article-title"><a href="/2017/03/06/demo/"><span>demo</span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2017/03/06/demo/" rel="bookmark">
-        <time class="entry-date published" datetime="2017-03-06T10:59:37.000Z">
-          2017-03-06
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <h5 id="测试从公司的mac迁移到自己的电脑上。"><a href="#测试从公司的mac迁移到自己的电脑上。" class="headerlink" title="测试从公司的mac迁移到自己的电脑上。"></a>测试从公司的mac迁移到自己的电脑上。</h5>
-      
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-
-<nav class="pagination">
-  
-  
-</nav>
     </main>
 
     <footer class="site-footer">
