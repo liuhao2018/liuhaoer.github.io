@@ -59,6 +59,58 @@
 
   
     
+    <h3 class="article-title"><a href="/2017/04/04/vlayout/"><span>vlayout</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/04/04/vlayout/" rel="bookmark">
+        <time class="entry-date published" datetime="2017-04-04T09:44:25.000Z">
+          2017-04-04
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h5 id="VLayout库实践"><a href="#VLayout库实践" class="headerlink" title="VLayout库实践"></a>VLayout库实践</h5><h6 id="VLayout是阿里开源的一套基于动态化构建布局的实现方式，起源于电商业务灵活的运营需求。利用这个库，我们也可以用来很容易实现复杂的页面布局，并可通过服务端，动态配置界面展现逻辑。类似手淘，天猫等电商App首页。"><a href="#VLayout是阿里开源的一套基于动态化构建布局的实现方式，起源于电商业务灵活的运营需求。利用这个库，我们也可以用来很容易实现复杂的页面布局，并可通过服务端，动态配置界面展现逻辑。类似手淘，天猫等电商App首页。" class="headerlink" title="VLayout是阿里开源的一套基于动态化构建布局的实现方式，起源于电商业务灵活的运营需求。利用这个库，我们也可以用来很容易实现复杂的页面布局，并可通过服务端，动态配置界面展现逻辑。类似手淘，天猫等电商App首页。"></a>VLayout是阿里开源的一套基于动态化构建布局的实现方式，起源于电商业务灵活的运营需求。利用这个库，我们也可以用来很容易实现复杂的页面布局，并可通过服务端，动态配置界面展现逻辑。类似手淘，天猫等电商App首页。</h6><p><img src="http://i4.buimg.com/567571/b1e4026ff4003065.png" alt=""></p>
+<p>类似这种复杂的首页，不是说不能实现，而是实现起来的确很麻烦。可以考虑使用RecyclerView的ItemType来解决，但是一旦类型较多，就给我们写Adapter带来很大的困扰。而且还要考虑服务端返回的JSON结构。最重要的是，我们无法掌握Item回收复用的效果。基于此，使用VLayout来解决这个问题成为我们可以作为技术选型的一种方案。</p>
+<p>这里我直接给出使用VLayout模仿美团外卖首页的实现效果：</p>
+<p><img src="http://i2.muimg.com/567571/794df805b53fd78f.png" alt=""></p>
+<p><code>当然，这里要说明的是美团外卖这个首页还比较简单，属于比较正常的首页展现形式。我们可以使用多类型或者addHeaderView的方式来解决，但是为了适应复杂的首页场景，还是非常推荐使用VLayout。故以此举例。</code></p>
+<h6 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> RecyclerView recyclerView;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line">        recyclerView = (RecyclerView) findViewById(R.id.list);</div><div class="line"></div><div class="line">        VirtualLayoutManager manager = <span class="keyword">new</span> VirtualLayoutManager(<span class="keyword">this</span>);</div><div class="line">        recyclerView.setLayoutManager(manager);</div><div class="line"></div><div class="line">        DelegateAdapter delegateAdapter = <span class="keyword">new</span> DelegateAdapter(manager);</div><div class="line"></div><div class="line">        recyclerView.setAdapter(delegateAdapter);</div><div class="line"></div><div class="line">        RecyclerView.RecycledViewPool recycledViewPool = <span class="keyword">new</span> RecyclerView.RecycledViewPool();</div><div class="line">        recycledViewPool.setMaxRecycledViews(<span class="number">0</span>,<span class="number">10</span>);</div><div class="line">        recyclerView.setRecycledViewPool(recycledViewPool);</div><div class="line"></div><div class="line">        delegateAdapter.addAdapter(<span class="keyword">new</span> VAdapter1(<span class="keyword">this</span>));</div><div class="line"></div><div class="line">        delegateAdapter.addAdapter(<span class="keyword">new</span> VAdapter2(<span class="keyword">this</span>));</div><div class="line">        delegateAdapter.addAdapter(<span class="keyword">new</span> VAdapter3(<span class="keyword">this</span>));</div><div class="line">        delegateAdapter.addAdapter(<span class="keyword">new</span> VAdapter4(<span class="keyword">this</span>));</div><div class="line">        delegateAdapter.addAdapter(<span class="keyword">new</span> VAdapter5(<span class="keyword">this</span>));</div><div class="line">        delegateAdapter.addAdapter(<span class="keyword">new</span> VAdapter6(<span class="keyword">this</span>));</div><div class="line">        </div><div class="line">        delegateAdapter.notifyDataSetChanged();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h6 id="more"><a href="#more" class="headerlink" title="more"></a>more</h6><p><a href="https://github.com/alibaba/vlayout" target="_blank" rel="external">https://github.com/alibaba/vlayout</a></p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+
+  <article>
+
+  
+    
     <h3 class="article-title"><a href="/2017/03/19/float/"><span>CSS中浮动知识理解</span></a></h3>
     
   
