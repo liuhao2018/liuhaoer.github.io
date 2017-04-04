@@ -1,90 +1,169 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
 <head>
-  <meta charset="utf-8">
-  
-  <title>vlayout | My Blog | Andorid/JavaScript/Python</title>
 
-  
-  <meta name="author" content="liuhao">
-  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  
-  <meta name="description" content="VLayout库实践VLayout是阿里开源的一套基于动态化构建布局的实现方式，起源于电商业务灵活的运营需求。利用这个库，我们也可以用来很容易实现复杂的页面布局，并可通过服务端，动态配置界面展现逻辑。类似手淘，天猫等电商App首页。
+    <!--Description-->
+    
+        <meta name="description" content="VLayout库实践VLayout是阿里开源的一套基于动态化构建布局的实现方式，起源于电商业务灵活的运营需求。利用这个库，我们也可以用来很容易实现复杂的页面布局，并可通过服务端，动态配置界面展现逻辑。类似手淘，天猫等电商App首页。
 类似这种复杂的首页，不是说不能实现，而是实现起来的确很麻烦。可以考">
-  
+    
 
-  
-  
-  <meta name="keywords" content="">
-  
+    <!--Author-->
+    
+        <meta name="author" content="liuhao">
+    
 
-  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="vlayout"/>
+    
 
-  <meta property="og:title" content="vlayout"/>
+    <!--Open Graph Description-->
+    
 
-  <meta property="og:site_name" content="My Blog"/>
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="My Blog"/>
 
-  
-  <meta property="og:image" content="/favicon.ico"/>
-  
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
 
-  <link href="/favicon.ico" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="My Blog" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>vlayout - My Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+	
 </head>
 
 
 <body>
-<div class="blog">
-  <div class="content">
 
-    <header>
-  <div class="site-branding">
-    <h1 class="site-title">
-      <a href="/">My Blog</a>
-    </h1>
-    <p class="site-description">Andorid/JavaScript/Python</p>
-  </div>
-  <nav class="site-navigation">
-    <ul>
-      
-        <li><a href="/">主页</a></li>
-      
-        <li><a href="/archives">归档</a></li>
-      
-    </ul>
-  </nav>
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>vlayout</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2017-04-04
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
 
-    <main class="site-main posts-loop">
-    <article>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
 
-  
-    
-    <h3 class="article-title"><span>vlayout</span></h3>
-    
-  
+            <!-- Tags and categories -->
+           
 
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2017/04/04/vlayout/" rel="bookmark">
-        <time class="entry-date published" datetime="2017-04-04T09:44:25.000Z">
-          2017-04-04
-        </time>
-      </a>
-    </span>
-  </div>
+            <!-- Gallery -->
+            
 
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <h5 id="VLayout库实践"><a href="#VLayout库实践" class="headerlink" title="VLayout库实践"></a>VLayout库实践</h5><h6 id="VLayout是阿里开源的一套基于动态化构建布局的实现方式，起源于电商业务灵活的运营需求。利用这个库，我们也可以用来很容易实现复杂的页面布局，并可通过服务端，动态配置界面展现逻辑。类似手淘，天猫等电商App首页。"><a href="#VLayout是阿里开源的一套基于动态化构建布局的实现方式，起源于电商业务灵活的运营需求。利用这个库，我们也可以用来很容易实现复杂的页面布局，并可通过服务端，动态配置界面展现逻辑。类似手淘，天猫等电商App首页。" class="headerlink" title="VLayout是阿里开源的一套基于动态化构建布局的实现方式，起源于电商业务灵活的运营需求。利用这个库，我们也可以用来很容易实现复杂的页面布局，并可通过服务端，动态配置界面展现逻辑。类似手淘，天猫等电商App首页。"></a>VLayout是阿里开源的一套基于动态化构建布局的实现方式，起源于电商业务灵活的运营需求。利用这个库，我们也可以用来很容易实现复杂的页面布局，并可通过服务端，动态配置界面展现逻辑。类似手淘，天猫等电商App首页。</h6><p><img src="http://i4.buimg.com/567571/b1e4026ff4003065.png" alt=""></p>
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h5 id="VLayout库实践"><a href="#VLayout库实践" class="headerlink" title="VLayout库实践"></a>VLayout库实践</h5><h6 id="VLayout是阿里开源的一套基于动态化构建布局的实现方式，起源于电商业务灵活的运营需求。利用这个库，我们也可以用来很容易实现复杂的页面布局，并可通过服务端，动态配置界面展现逻辑。类似手淘，天猫等电商App首页。"><a href="#VLayout是阿里开源的一套基于动态化构建布局的实现方式，起源于电商业务灵活的运营需求。利用这个库，我们也可以用来很容易实现复杂的页面布局，并可通过服务端，动态配置界面展现逻辑。类似手淘，天猫等电商App首页。" class="headerlink" title="VLayout是阿里开源的一套基于动态化构建布局的实现方式，起源于电商业务灵活的运营需求。利用这个库，我们也可以用来很容易实现复杂的页面布局，并可通过服务端，动态配置界面展现逻辑。类似手淘，天猫等电商App首页。"></a>VLayout是阿里开源的一套基于动态化构建布局的实现方式，起源于电商业务灵活的运营需求。利用这个库，我们也可以用来很容易实现复杂的页面布局，并可通过服务端，动态配置界面展现逻辑。类似手淘，天猫等电商App首页。</h6><p><img src="http://i4.buimg.com/567571/b1e4026ff4003065.png" alt=""></p>
 <p>类似这种复杂的首页，不是说不能实现，而是实现起来的确很麻烦。可以考虑使用RecyclerView的ItemType来解决，但是一旦类型较多，就给我们写Adapter带来很大的困扰。而且还要考虑服务端返回的JSON结构。最重要的是，我们无法掌握Item回收复用的效果。基于此，使用VLayout来解决这个问题成为我们可以作为技术选型的一种方案。</p>
 <p>这里我直接给出使用VLayout模仿美团外卖首页的实现效果：</p>
 <p><img src="http://i2.muimg.com/567571/794df805b53fd78f.png" alt=""></p>
@@ -92,39 +171,76 @@
 <h6 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> RecyclerView recyclerView;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line">        recyclerView = (RecyclerView) findViewById(R.id.list);</div><div class="line"></div><div class="line">        VirtualLayoutManager manager = <span class="keyword">new</span> VirtualLayoutManager(<span class="keyword">this</span>);</div><div class="line">        recyclerView.setLayoutManager(manager);</div><div class="line"></div><div class="line">        DelegateAdapter delegateAdapter = <span class="keyword">new</span> DelegateAdapter(manager);</div><div class="line"></div><div class="line">        recyclerView.setAdapter(delegateAdapter);</div><div class="line"></div><div class="line">        RecyclerView.RecycledViewPool recycledViewPool = <span class="keyword">new</span> RecyclerView.RecycledViewPool();</div><div class="line">        recycledViewPool.setMaxRecycledViews(<span class="number">0</span>,<span class="number">10</span>);</div><div class="line">        recyclerView.setRecycledViewPool(recycledViewPool);</div><div class="line"></div><div class="line">        delegateAdapter.addAdapter(<span class="keyword">new</span> VAdapter1(<span class="keyword">this</span>));</div><div class="line"></div><div class="line">        delegateAdapter.addAdapter(<span class="keyword">new</span> VAdapter2(<span class="keyword">this</span>));</div><div class="line">        delegateAdapter.addAdapter(<span class="keyword">new</span> VAdapter3(<span class="keyword">this</span>));</div><div class="line">        delegateAdapter.addAdapter(<span class="keyword">new</span> VAdapter4(<span class="keyword">this</span>));</div><div class="line">        delegateAdapter.addAdapter(<span class="keyword">new</span> VAdapter5(<span class="keyword">this</span>));</div><div class="line">        delegateAdapter.addAdapter(<span class="keyword">new</span> VAdapter6(<span class="keyword">this</span>));</div><div class="line">        </div><div class="line">        delegateAdapter.notifyDataSetChanged();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h6 id="more"><a href="#more" class="headerlink" title="more"></a>more</h6><p><a href="https://github.com/alibaba/vlayout" target="_blank" rel="external">https://github.com/alibaba/vlayout</a></p>
 
-      
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
     </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-
-    
-
-    </div>
-
-    
-  </div>
 </article>
 
+    <!-- Footer -->
+    <hr />
 
-    </main>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
 
-    <footer class="site-footer">
-  <p class="site-info">
-    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
-    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
-    </br>
-    
-    &copy; 2017 liuhao
-    
-  </p>
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2017 liuhao<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
 </footer>
+
+
+    <!-- After footer scripts -->
     
-  </div>
-</div>
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
 </body>
+
 </html>
