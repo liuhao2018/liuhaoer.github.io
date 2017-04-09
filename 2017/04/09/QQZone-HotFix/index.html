@@ -10,6 +10,11 @@
 
     <!--Description-->
     
+        <meta name="description" content="QQZone热修复方案把修复好的dex和含有bug的dex放入数组中，把修复好的dex放在数组最前面。
+类在加载时，从第一个dex中就可以找到修复好的类。
+存在的问题：CLASS_ISPREVERIFIED例如:
+1234567public class A&amp;#123; 	public A()&amp;#12">
+    
 
     <!--Author-->
     
@@ -18,7 +23,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="My Blog"/>
+        <meta property="og:title" content="QQZone_HotFix"/>
     
 
     <!--Open Graph Description-->
@@ -29,7 +34,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -40,7 +45,7 @@
 
     <!-- Title -->
     
-    <title>归档 - My Blog</title>
+    <title>QQZone_HotFix - My Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -126,141 +131,67 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>归档</h1>
+                <div class="post-heading">
+                    <h1>QQZone_HotFix</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2017-04-09
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2017/04/09/QQZone-HotFix/">
-        <h1 class="post-title archive">
-            QQZone_HotFix
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2017-04-09
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h3 id="QQZone热修复方案"><a href="#QQZone热修复方案" class="headerlink" title="QQZone热修复方案"></a>QQZone热修复方案</h3><p>把修复好的dex和含有bug的dex放入数组中，把修复好的dex放在数组最前面。</p>
+<p>类在加载时，从第一个dex中就可以找到修复好的类。</p>
+<h5 id="存在的问题：CLASS-ISPREVERIFIED"><a href="#存在的问题：CLASS-ISPREVERIFIED" class="headerlink" title="存在的问题：CLASS_ISPREVERIFIED"></a>存在的问题：CLASS_ISPREVERIFIED</h5><p>例如:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</div><div class="line"> 	<span class="function"><span class="keyword">public</span> <span class="title">A</span><span class="params">()</span></span>&#123;</div><div class="line">      B b = <span class="keyword">new</span> B();</div><div class="line"> 	&#125; </div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span></span>&#123; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果A类B类在同一个dex中，在A类的某些方法中引用了B类，在虚拟机启动进行类校验的时候，A类就会被打上CLASS_ISPREVERIFIED的标志。</p>
+<p>当我们发现B类中存在bug时，我们修改后重新打一个dex。</p>
+<p>当加载这个新的dex中的B类时，会报错。因为A类已经被打上了CLASS_ISPREVERIFIED的标志，这时候如果A类再引用其他dex中的类，就会报错。</p>
+<p><code>我们要解决的问题是防止A类被打上CLASS_ISPREVERIFIED的标志。</code></p>
+<blockquote>
+<p>QQZone的解决方案是，在每个类的构造函数中，加入System.out.println(AntilazyLoad.class);这样每个类都会引用一个独立的dex中类，就不会被打上CLASS_ISPREVERIFIED的标志。</p>
+</blockquote>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2017/04/08/AndFix/">
-        <h1 class="post-title archive">
-            AndFix
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2017-04-08
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2017/04/04/vlayout/">
-        <h1 class="post-title archive">
-            vlayout
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2017-04-04
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2017/03/19/float/">
-        <h1 class="post-title archive">
-            CSS中浮动知识理解
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2017-03-19
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2017/03/11/js中标准的原型式继承写法/">
-        <h1 class="post-title archive">
-            js中标准的原型式继承写法
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2017-03-11
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2017/03/09/js中的对象创建方式/">
-        <h1 class="post-title archive">
-            js中的对象创建方式
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2017-03-09
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2017/03/08/对js中闭包的理解/">
-        <h1 class="post-title archive">
-            对js中闭包的理解
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2017-03-08
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2017/03/06/demo/">
-        <h1 class="post-title archive">
-            demo
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2017-03-06
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-</ul>
         </div>
     </div>
-</div>
-
-
+</article>
 
     <!-- Footer -->
     <hr />
