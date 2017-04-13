@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="SwipeToLoadLayout今天在关注刷新相关框架的时候，发现了SwipeToLoadLayout这个框架，感觉这个项目就是我一直追求的刷新和加载控件实现，它不仅能够支持下拉刷新，上拉加载，和底部自动加载，而且还支持自定义配置刷新头部和加载更多的底部布局。这样就将刷新和加载的逻辑剥离了Recy">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="liuhao">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="SwipeToLoadLayout"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="My Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>SwipeToLoadLayout - My Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+	
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>SwipeToLoadLayout</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2017-04-12
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h3 id="SwipeToLoadLayout"><a href="#SwipeToLoadLayout" class="headerlink" title="SwipeToLoadLayout"></a>SwipeToLoadLayout</h3><p>今天在关注刷新相关框架的时候，发现了<code>SwipeToLoadLayout</code>这个框架，感觉这个项目就是我一直追求的刷新和加载控件实现，它不仅能够支持下拉刷新，上拉加载，和底部自动加载，而且还支持自定义配置刷新头部和加载更多的底部布局。这样就将刷新和加载的逻辑剥离了<code>RecyclerView</code>和<code>Adapter</code>。而且还能轻松的实现类似美团，京东App中的刷新头部的配置。对其源码进行了一遍学习后，在这里做一下笔记。也是对自定义View和手势处理的知识做一下复习。</p>
+<p><img src="http://i4.buimg.com/567571/d3d408ef64b93971.png" alt=""></p>
+<p>其中，除了一堆接口文件之外，核心代码全部都在<code>SwipeToLoadLayout</code>中，它直接继承自ViewGroup，处理了<code>measure</code>，<code>layout</code>，<code>touchevent</code>等操作。</p>
+<h5 id="onFinishInflate"><a href="#onFinishInflate" class="headerlink" title="onFinishInflate()"></a>onFinishInflate()</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onFinishInflate</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onFinishInflate();</div><div class="line">    <span class="keyword">final</span> <span class="keyword">int</span> childNum = getChildCount();</div><div class="line">    <span class="keyword">if</span> (childNum == <span class="number">0</span>) &#123;</div><div class="line">        <span class="comment">// no child return</span></div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="number">0</span> &lt; childNum &amp;&amp; childNum &lt; <span class="number">4</span>) &#123;</div><div class="line">        mHeaderView = findViewById(R.id.swipe_refresh_header);</div><div class="line">        mTargetView = findViewById(R.id.swipe_target);</div><div class="line">        mFooterView = findViewById(R.id.swipe_load_more_footer);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="comment">// more than three children: unsupported!</span></div><div class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(<span class="string">"Children num must equal or less than 3"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (mTargetView == <span class="keyword">null</span>) &#123;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (mHeaderView != <span class="keyword">null</span> &amp;&amp; mHeaderView <span class="keyword">instanceof</span> SwipeTrigger) &#123;</div><div class="line">        mHeaderView.setVisibility(GONE);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (mFooterView != <span class="keyword">null</span> &amp;&amp; mFooterView <span class="keyword">instanceof</span> SwipeTrigger) &#123;</div><div class="line">        mFooterView.setVisibility(GONE);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这里直接将childView分为三个部分并实例化<code>mHeaderView</code>为刷新头部view，<code>mTargetView</code>为内容view，可以是<code>RecyclerView</code>，<code>ListView</code>。<code>mFooteonMeasurerView</code>为加载更多布局。</p>
+<h5 id="onMeasure"><a href="#onMeasure" class="headerlink" title="onMeasure()"></a>onMeasure()</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onMeasure</span><span class="params">(<span class="keyword">int</span> widthMeasureSpec, <span class="keyword">int</span> heightMeasureSpec)</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onMeasure(widthMeasureSpec, heightMeasureSpec);</div><div class="line">    <span class="comment">// header</span></div><div class="line">    <span class="keyword">if</span> (mHeaderView != <span class="keyword">null</span>) &#123;</div><div class="line">        <span class="keyword">final</span> View headerView = mHeaderView;</div><div class="line">        measureChildWithMargins(headerView, widthMeasureSpec, <span class="number">0</span>, heightMeasureSpec, <span class="number">0</span>);</div><div class="line">        MarginLayoutParams lp = ((MarginLayoutParams) headerView.getLayoutParams());</div><div class="line">        mHeaderHeight = headerView.getMeasuredHeight() + lp.topMargin + lp.bottomMargin;</div><div class="line">        <span class="keyword">if</span> (mRefreshTriggerOffset &lt; mHeaderHeight) &#123;</div><div class="line">            mRefreshTriggerOffset = mHeaderHeight;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// target</span></div><div class="line">    <span class="keyword">if</span> (mTargetView != <span class="keyword">null</span>) &#123;</div><div class="line">        <span class="keyword">final</span> View targetView = mTargetView;</div><div class="line">        measureChildWithMargins(targetView, widthMeasureSpec, <span class="number">0</span>, heightMeasureSpec, <span class="number">0</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// footer</span></div><div class="line">    <span class="keyword">if</span> (mFooterView != <span class="keyword">null</span>) &#123;</div><div class="line">        <span class="keyword">final</span> View footerView = mFooterView;</div><div class="line">        measureChildWithMargins(footerView, widthMeasureSpec, <span class="number">0</span>, heightMeasureSpec, <span class="number">0</span>);</div><div class="line">        MarginLayoutParams lp = ((MarginLayoutParams) footerView.getLayoutParams());</div><div class="line">        mFooterHeight = footerView.getMeasuredHeight() + lp.topMargin + lp.bottomMargin;</div><div class="line">        <span class="keyword">if</span> (mLoadMoreTriggerOffset &lt; mFooterHeight) &#123;</div><div class="line">            mLoadMoreTriggerOffset = mFooterHeight;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这里也没什么可说的，对<code>mHeaderView</code>和<code>mFooterView</code>的子view进行测量，这里主要是为了得到<code>mHeaderView</code>和<code>mFooterView</code>的高度，然后将它们赋值给<code>mRefreshTriggerOffset</code>和<code>mLoadMoreTriggerOffset</code>。作为滑动偏移量的参考值。在后面会用到。</p>
+<h5 id="onLayout"><a href="#onLayout" class="headerlink" title="onLayout()"></a>onLayout()</h5><p>layout部分代码较多，这里只贴出核心部分。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">  <span class="meta">@Override</span></div><div class="line">  <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onLayout</span><span class="params">(<span class="keyword">boolean</span> changed, <span class="keyword">int</span> l, <span class="keyword">int</span> t, <span class="keyword">int</span> r, <span class="keyword">int</span> b)</span> </span>&#123;</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> width = getMeasuredWidth();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> height = getMeasuredHeight();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> paddingLeft = getPaddingLeft();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> paddingTop = getPaddingTop();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> paddingRight = getPaddingRight();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> paddingBottom = getPaddingBottom();</div><div class="line">    </div><div class="line">      <span class="keyword">final</span> View headerView = mHeaderView;</div><div class="line">      MarginLayoutParams lp = (MarginLayoutParams) headerView.getLayoutParams();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> headerLeft = paddingLeft + lp.leftMargin;</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> headerTop = paddingTop + lp.topMargin - mHeaderHeight + mHeaderOffset;</div><div class="line">    	<span class="keyword">final</span> <span class="keyword">int</span> headerRight = headerLeft + headerView.getMeasuredWidth();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> headerBottom = headerTop + headerView.getMeasuredHeight();</div><div class="line">      headerView.layout(headerLeft, headerTop, headerRight, headerBottom);</div><div class="line">    </div><div class="line">    	<span class="keyword">final</span> View targetView = mTargetView;</div><div class="line">      MarginLayoutParams lp = (MarginLayoutParams) targetView.getLayoutParams();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> targetLeft = paddingLeft + lp.leftMargin;</div><div class="line">    	<span class="keyword">final</span> <span class="keyword">int</span> targetTop = paddingTop + lp.topMargin + mTargetOffset;</div><div class="line">    	<span class="keyword">final</span> <span class="keyword">int</span> targetRight = targetLeft + targetView.getMeasuredWidth();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> targetBottom = targetTop + targetView.getMeasuredHeight();</div><div class="line">      targetView.layout(targetLeft, targetTop, targetRight, targetBottom);</div><div class="line">    </div><div class="line">    	<span class="keyword">final</span> View footerView = mFooterView;</div><div class="line">      MarginLayoutParams lp = (MarginLayoutParams) footerView.getLayoutParams();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> footerLeft = paddingLeft + lp.leftMargin;</div><div class="line">footerBottom = height - paddingBottom - lp.bottomMargin + mFooterHeight + mFooterOffset;</div><div class="line">    	<span class="keyword">final</span> <span class="keyword">int</span> footerTop = footerBottom - footerView.getMeasuredHeight();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> footerRight = footerLeft + footerView.getMeasuredWidth();</div><div class="line">      footerView.layout(footerLeft, footerTop, footerRight, footerBottom);</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p>这里将三个childView进行 <code>layout</code>，特别的，将<code>mHeaderView</code>的<code>top</code>设为其高度的负值，将它隐藏容器视图的外面。</p>
+<h5 id="onInterceptTouchEvent"><a href="#onInterceptTouchEvent" class="headerlink" title="onInterceptTouchEvent()"></a>onInterceptTouchEvent()</h5><p>事件拦截部分主要关注<code>down</code>，和<code>move</code>事件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onInterceptTouchEvent</span><span class="params">(MotionEvent event)</span> </span>&#123;</div><div class="line">    <span class="keyword">final</span> <span class="keyword">int</span> action = MotionEventCompat.getActionMasked(event);</div><div class="line">    <span class="keyword">switch</span> (action) &#123;</div><div class="line">         <span class="keyword">case</span> MotionEvent.ACTION_DOWN:</div><div class="line">        	 <span class="keyword">if</span> (STATUS.isSwipingToRefresh(mStatus) || STATUS.isReleaseToRefresh(mStatus)</div><div class="line">                    || STATUS.isSwipingToLoadMore(mStatus) || STATUS.isReleaseToLoadMore(mStatus)) &#123;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">               </div><div class="line">            &#125;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> MotionEvent.ACTION_MOVE:</div><div class="line"> <span class="keyword">boolean</span> moved = Math.abs(yInitDiff) &gt; Math.abs(xInitDiff)</div><div class="line">                    &amp;&amp; Math.abs(yInitDiff) &gt; mTouchSlop;</div><div class="line">            <span class="keyword">boolean</span> triggerCondition =</div><div class="line">                    (yInitDiff &gt; <span class="number">0</span> &amp;&amp; moved &amp;&amp; onCheckCanRefresh()) ||</div><div class="line">                            (yInitDiff &lt; <span class="number">0</span> &amp;&amp; moved &amp;&amp; onCheckCanLoadMore());</div><div class="line">            <span class="keyword">if</span> (triggerCondition) &#123;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">super</span>.onInterceptTouchEvent(event);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>关于手势的拦截是这样处理的，如果是<code>down</code>事件，会判断当前的状态，只要是正在下拉，上拉，松开下拉，松开上拉时，将<code>down</code>事件拦截。如果是<code>moev</code>事件，会判断滑动的有效性并且检查<code>mTargetView</code>此时是否具备滑动能力，来判断是否将事件拦截掉。当<code>mTargetView</code>在顶部或者滑动到底部，此时在相应方向上无法再滑动，事件就被容器布局接收处理。</p>
+<h5 id="onTouchEvent"><a href="#onTouchEvent" class="headerlink" title="onTouchEvent()"></a>onTouchEvent()</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onTouchEvent</span><span class="params">(MotionEvent event)</span> </span>&#123;</div><div class="line">    <span class="keyword">final</span> <span class="keyword">int</span> action = MotionEventCompat.getActionMasked(event);</div><div class="line"></div><div class="line">    <span class="keyword">switch</span> (action) &#123;</div><div class="line">        <span class="keyword">case</span> MotionEvent.ACTION_MOVE:</div><div class="line">            <span class="keyword">if</span> (Math.abs(xDiff) &gt; Math.abs(yDiff) &amp;&amp; Math.abs(xDiff) &gt; mTouchSlop) &#123;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (STATUS.isStatusDefault(mStatus)) &#123;</div><div class="line">                <span class="keyword">if</span> (yDiff &gt; <span class="number">0</span> &amp;&amp; onCheckCanRefresh()) &#123;</div><div class="line">                    mRefreshCallback.onPrepare();</div><div class="line">                    setStatus(STATUS.STATUS_SWIPING_TO_REFRESH);</div><div class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (yDiff &lt; <span class="number">0</span> &amp;&amp; onCheckCanLoadMore()) &#123;</div><div class="line">                    mLoadMoreCallback.onPrepare();</div><div class="line">                    setStatus(STATUS.STATUS_SWIPING_TO_LOAD_MORE);</div><div class="line">                &#125;</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (STATUS.isRefreshStatus(mStatus)) &#123;</div><div class="line">                <span class="keyword">if</span> (mTargetOffset &lt;= <span class="number">0</span>) &#123;</div><div class="line">                    setStatus(STATUS.STATUS_DEFAULT);</div><div class="line">                    fixCurrentStatusLayout();</div><div class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">                &#125;</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (STATUS.isLoadMoreStatus(mStatus)) &#123;</div><div class="line">                <span class="keyword">if</span> (mTargetOffset &gt;= <span class="number">0</span>) &#123;</div><div class="line">                    setStatus(STATUS.STATUS_DEFAULT);</div><div class="line">                    fixCurrentStatusLayout();</div><div class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="keyword">if</span> (STATUS.isRefreshStatus(mStatus)) &#123;</div><div class="line">                <span class="keyword">if</span> (STATUS.isSwipingToRefresh(mStatus) || STATUS.isReleaseToRefresh(mStatus)) &#123;</div><div class="line">                    <span class="keyword">if</span> (mTargetOffset &gt;= mRefreshTriggerOffset) &#123;</div><div class="line">                        setStatus(STATUS.STATUS_RELEASE_TO_REFRESH);</div><div class="line">                    &#125; <span class="keyword">else</span> &#123;</div><div class="line">                        setStatus(STATUS.STATUS_SWIPING_TO_REFRESH);</div><div class="line">                    &#125;</div><div class="line">                    fingerScroll(yDiff);</div><div class="line">                &#125;</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (STATUS.isLoadMoreStatus(mStatus)) &#123;</div><div class="line">                <span class="keyword">if</span> (STATUS.isSwipingToLoadMore(mStatus) || STATUS.isReleaseToLoadMore(mStatus)) &#123;</div><div class="line">                    <span class="keyword">if</span> (-mTargetOffset &gt;= mLoadMoreTriggerOffset) &#123;</div><div class="line">                        setStatus(STATUS.STATUS_RELEASE_TO_LOAD_MORE);</div><div class="line">                    &#125; <span class="keyword">else</span> &#123;</div><div class="line">                        setStatus(STATUS.STATUS_SWIPING_TO_LOAD_MORE);</div><div class="line">                    &#125;</div><div class="line">                    fingerScroll(yDiff);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">super</span>.onTouchEvent(event);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>手势事件处理的部分主要来看<code>move</code>事件。滑动核心逻辑都在于此。</p>
+<p><img src="http://i2.muimg.com/567571/c17f070a447d3c26.png" alt=""></p>
+<p>这里先搞清楚定义的几个状态。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isRefreshStatus</span><span class="params">(<span class="keyword">final</span> <span class="keyword">int</span> status)</span> </span>&#123;</div><div class="line">           <span class="keyword">return</span> status &lt; STATUS.STATUS_DEFAULT;</div><div class="line">  &#125;</div><div class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isLoadMoreStatus</span><span class="params">(<span class="keyword">final</span> <span class="keyword">int</span> status)</span> </span>&#123;</div><div class="line">           <span class="keyword">return</span> status &gt; STATUS.STATUS_DEFAULT;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p>0为默认状态，负值统称为刷新状态，正值统称为加载更多状态。</p>
+<p>在<code>onTouchEvent</code>中判断也分为三个部分。</p>
+<p><img src="http://i1.piimg.com/567571/06f607f8b7cca03f.png" alt=""></p>
+<p>首先判断当前是默认的正常状态时，监听手指在y轴上的移动距离并判断当前在<code>mTaegetView</code>顶部或者底部时，表明此时<code>SwipeToLoadLayout</code>应该接收这个事件去做刷新或者加载。回调<code>onPrepare()</code>，并把状态设为正在下拉或者正在上拉。</p>
+<p><img src="http://i2.muimg.com/567571/a27251787d7b4800.png" alt=""></p>
+<p>第二层判断就是是否处于下拉。如果滑动的距离超过<code>mHeaderView</code>的高度时，将状态设为<code>STATUS.RELEASE_TO_REFRESH</code>。并执行<code>fingerScroll(dDiff)</code>，这个方法就是view滑动核心放啊。</p>
+<p><img src="http://i1.piimg.com/567571/8ecb71806bd59cd8.png" alt=""></p>
+<p>第三层与第二层完全一样，不再赘述。</p>
+<p>最后需要看的就是<code>fingerScroll(yDiff)</code>，通过它，三个view在手势的移动中，不断进行<code>layout</code>来确定位置。</p>
+<p><img src="http://i2.muimg.com/567571/323dfea2cb5410dd.png" alt=""></p>
+<p>回调<code>onMove</code>，进入<code>updateScroll(yScrolled)</code>。</p>
+<p><img src="http://i2.muimg.com/567571/9b29184d045fcd45.png" alt=""></p>
+<p>此时可以看的到是，将<code>mTargetView</code>赋值后，又调用了<code>layoutChildren()</code>。也就是在<code>onLayout()</code>中也调用过的。跟到这里也就明白了，<code>SwipeToLoadLayout</code>的原理所在，就是抓取手势的下拉和上拉事件，并记录<code>mTargetOffSet</code>，不断重新对<code>mHeaderView</code>，<code>mTargetView</code>，<code>mFooterView</code>进行位置确定实现的。</p>
+<h5 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h5><p>这一套代码理解起来其实难度不大，只要多打几个Log就能轻松理解。但是基于对GitHub上关于刷新的库来看，很多都做的并不是特别好，有的是继承自<code>ViewGroup</code>，实现了下拉刷新，但是没有实现加载功能。有的是把刷新和加载的视图放到<code>RecyclerView</code>的<code>ItemType</code>里。虽然能够实现功能，但是总觉得很不优雅。基于此，当我发现了<code>SwipeToLoadLayout</code>这个库的时候，十分欣喜。于是，有了这一篇源码的记录。</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2017 liuhao<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
