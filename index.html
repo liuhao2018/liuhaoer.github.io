@@ -1,352 +1,1721 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
 
-<!-- Head tag -->
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--Description-->
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
     
-
-    <!--Author-->
     
-        <meta name="author" content="liuhao">
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
-
-    <!--Open Graph Title-->
     
-        <meta property="og:title" content="My Blog"/>
-    
-
-    <!--Open Graph Description-->
-    
-
-    <!--Open Graph Site Name-->
-    <meta property="og:site_name" content="My Blog"/>
-
-    <!--Type page-->
-    
-        <meta property="og:type" content="website" />
-    
-
-    <!--Page Cover-->
-    
-
-        <meta name="twitter:card" content="summary" />
-    
-
-    <!-- Title -->
-    
-    <title>My Blog</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-
-    <!-- Custom Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Gallery -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
-
-    <!-- Google Analytics -->
-    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
 
 
-    <!-- favicon -->
-    
-	
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="刘昊的技术博客">
+<meta property="og:url" content="http://liuhaoer.github.io/index.html">
+<meta property="og:site_name" content="刘昊的技术博客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="刘昊的技术博客">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://liuhaoer.github.io/"/>
+
+
+
+
+
+  <title>刘昊的技术博客</title>
+  
+
+
+
+
+
+
+
+
 </head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
-<body>
+  
+  
+    
+  
 
-    <!-- Menu -->
-    <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Configurable Title</a>
-        </div>
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                
-                    <li>
-                        <a href="/">
-                            
-                                Home
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/archives">
-                            
-                                Archives
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="https://github.com/klugjo/hexo-theme-clean-blog">
-                            
-                                <i class="fa fa-github fa-stack-2x"></i>
-                            
-                        </a>
-                    </li>
-                
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">刘昊的技术博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
-    <!-- /.container -->
+      
+        <p class="site-subtitle">Andorid/JavaScript/Python</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
 </nav>
 
-    <!-- Main Content -->
-    <!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
-<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>My Blog</h1>
-                    <hr class="small">
-                    <span class="subheading">Andorid/JavaScript/Python</span>
-                </div>
-            </div>
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liuhaoer.github.io/2017/04/12/SwipeToLoadLayout/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liuhao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘昊的技术博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/04/12/SwipeToLoadLayout/" itemprop="url">SwipeToLoadLayout</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-12T18:52:15+08:00">
+                2017-04-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="SwipeToLoadLayout"><a href="#SwipeToLoadLayout" class="headerlink" title="SwipeToLoadLayout"></a>SwipeToLoadLayout</h3><p>今天在关注刷新相关框架的时候，发现了<code>SwipeToLoadLayout</code>这个框架，感觉这个项目就是我一直追求的刷新和加载控件实现，它不仅能够支持下拉刷新，上拉加载，和底部自动加载，而且还支持自定义配置刷新头部和加载更多的底部布局。这样就将刷新和加载的逻辑剥离了<code>RecyclerView</code>和<code>Adapter</code>。而且还能轻松的实现类似美团，京东App中的刷新头部的配置。对其源码进行了一遍学习后，在这里做一下笔记。也是对自定义View和手势处理的知识做一下复习。</p>
+<p><img src="http://i4.buimg.com/567571/d3d408ef64b93971.png" alt=""></p>
+<p>其中，除了一堆接口文件之外，核心代码全部都在<code>SwipeToLoadLayout</code>中，它直接继承自ViewGroup，处理了<code>measure</code>，<code>layout</code>，<code>touchevent</code>等操作。</p>
+<h5 id="onFinishInflate"><a href="#onFinishInflate" class="headerlink" title="onFinishInflate()"></a>onFinishInflate()</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onFinishInflate</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onFinishInflate();</div><div class="line">    <span class="keyword">final</span> <span class="keyword">int</span> childNum = getChildCount();</div><div class="line">    <span class="keyword">if</span> (childNum == <span class="number">0</span>) &#123;</div><div class="line">        <span class="comment">// no child return</span></div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="number">0</span> &lt; childNum &amp;&amp; childNum &lt; <span class="number">4</span>) &#123;</div><div class="line">        mHeaderView = findViewById(R.id.swipe_refresh_header);</div><div class="line">        mTargetView = findViewById(R.id.swipe_target);</div><div class="line">        mFooterView = findViewById(R.id.swipe_load_more_footer);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="comment">// more than three children: unsupported!</span></div><div class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(<span class="string">"Children num must equal or less than 3"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (mTargetView == <span class="keyword">null</span>) &#123;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (mHeaderView != <span class="keyword">null</span> &amp;&amp; mHeaderView <span class="keyword">instanceof</span> SwipeTrigger) &#123;</div><div class="line">        mHeaderView.setVisibility(GONE);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (mFooterView != <span class="keyword">null</span> &amp;&amp; mFooterView <span class="keyword">instanceof</span> SwipeTrigger) &#123;</div><div class="line">        mFooterView.setVisibility(GONE);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这里直接将childView分为三个部分并实例化<code>mHeaderView</code>为刷新头部view，<code>mTargetView</code>为内容view，可以是<code>RecyclerView</code>，<code>ListView</code>。<code>mFooteonMeasurerView</code>为加载更多布局。</p>
+<h5 id="onMeasure"><a href="#onMeasure" class="headerlink" title="onMeasure()"></a>onMeasure()</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onMeasure</span><span class="params">(<span class="keyword">int</span> widthMeasureSpec, <span class="keyword">int</span> heightMeasureSpec)</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onMeasure(widthMeasureSpec, heightMeasureSpec);</div><div class="line">    <span class="comment">// header</span></div><div class="line">    <span class="keyword">if</span> (mHeaderView != <span class="keyword">null</span>) &#123;</div><div class="line">        <span class="keyword">final</span> View headerView = mHeaderView;</div><div class="line">        measureChildWithMargins(headerView, widthMeasureSpec, <span class="number">0</span>, heightMeasureSpec, <span class="number">0</span>);</div><div class="line">        MarginLayoutParams lp = ((MarginLayoutParams) headerView.getLayoutParams());</div><div class="line">        mHeaderHeight = headerView.getMeasuredHeight() + lp.topMargin + lp.bottomMargin;</div><div class="line">        <span class="keyword">if</span> (mRefreshTriggerOffset &lt; mHeaderHeight) &#123;</div><div class="line">            mRefreshTriggerOffset = mHeaderHeight;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// target</span></div><div class="line">    <span class="keyword">if</span> (mTargetView != <span class="keyword">null</span>) &#123;</div><div class="line">        <span class="keyword">final</span> View targetView = mTargetView;</div><div class="line">        measureChildWithMargins(targetView, widthMeasureSpec, <span class="number">0</span>, heightMeasureSpec, <span class="number">0</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// footer</span></div><div class="line">    <span class="keyword">if</span> (mFooterView != <span class="keyword">null</span>) &#123;</div><div class="line">        <span class="keyword">final</span> View footerView = mFooterView;</div><div class="line">        measureChildWithMargins(footerView, widthMeasureSpec, <span class="number">0</span>, heightMeasureSpec, <span class="number">0</span>);</div><div class="line">        MarginLayoutParams lp = ((MarginLayoutParams) footerView.getLayoutParams());</div><div class="line">        mFooterHeight = footerView.getMeasuredHeight() + lp.topMargin + lp.bottomMargin;</div><div class="line">        <span class="keyword">if</span> (mLoadMoreTriggerOffset &lt; mFooterHeight) &#123;</div><div class="line">            mLoadMoreTriggerOffset = mFooterHeight;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这里也没什么可说的，对<code>mHeaderView</code>和<code>mFooterView</code>的子view进行测量，这里主要是为了得到<code>mHeaderView</code>和<code>mFooterView</code>的高度，然后将它们赋值给<code>mRefreshTriggerOffset</code>和<code>mLoadMoreTriggerOffset</code>。作为滑动偏移量的参考值。在后面会用到。</p>
+<h5 id="onLayout"><a href="#onLayout" class="headerlink" title="onLayout()"></a>onLayout()</h5><p>layout部分代码较多，这里只贴出核心部分。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">  <span class="meta">@Override</span></div><div class="line">  <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onLayout</span><span class="params">(<span class="keyword">boolean</span> changed, <span class="keyword">int</span> l, <span class="keyword">int</span> t, <span class="keyword">int</span> r, <span class="keyword">int</span> b)</span> </span>&#123;</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> width = getMeasuredWidth();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> height = getMeasuredHeight();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> paddingLeft = getPaddingLeft();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> paddingTop = getPaddingTop();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> paddingRight = getPaddingRight();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> paddingBottom = getPaddingBottom();</div><div class="line">    </div><div class="line">      <span class="keyword">final</span> View headerView = mHeaderView;</div><div class="line">      MarginLayoutParams lp = (MarginLayoutParams) headerView.getLayoutParams();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> headerLeft = paddingLeft + lp.leftMargin;</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> headerTop = paddingTop + lp.topMargin - mHeaderHeight + mHeaderOffset;</div><div class="line">    	<span class="keyword">final</span> <span class="keyword">int</span> headerRight = headerLeft + headerView.getMeasuredWidth();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> headerBottom = headerTop + headerView.getMeasuredHeight();</div><div class="line">      headerView.layout(headerLeft, headerTop, headerRight, headerBottom);</div><div class="line">    </div><div class="line">    	<span class="keyword">final</span> View targetView = mTargetView;</div><div class="line">      MarginLayoutParams lp = (MarginLayoutParams) targetView.getLayoutParams();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> targetLeft = paddingLeft + lp.leftMargin;</div><div class="line">    	<span class="keyword">final</span> <span class="keyword">int</span> targetTop = paddingTop + lp.topMargin + mTargetOffset;</div><div class="line">    	<span class="keyword">final</span> <span class="keyword">int</span> targetRight = targetLeft + targetView.getMeasuredWidth();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> targetBottom = targetTop + targetView.getMeasuredHeight();</div><div class="line">      targetView.layout(targetLeft, targetTop, targetRight, targetBottom);</div><div class="line">    </div><div class="line">    	<span class="keyword">final</span> View footerView = mFooterView;</div><div class="line">      MarginLayoutParams lp = (MarginLayoutParams) footerView.getLayoutParams();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> footerLeft = paddingLeft + lp.leftMargin;</div><div class="line">footerBottom = height - paddingBottom - lp.bottomMargin + mFooterHeight + mFooterOffset;</div><div class="line">    	<span class="keyword">final</span> <span class="keyword">int</span> footerTop = footerBottom - footerView.getMeasuredHeight();</div><div class="line">      <span class="keyword">final</span> <span class="keyword">int</span> footerRight = footerLeft + footerView.getMeasuredWidth();</div><div class="line">      footerView.layout(footerLeft, footerTop, footerRight, footerBottom);</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p>这里将三个childView进行 <code>layout</code>，特别的，将<code>mHeaderView</code>的<code>top</code>设为其高度的负值，将它隐藏容器视图的外面。</p>
+<h5 id="onInterceptTouchEvent"><a href="#onInterceptTouchEvent" class="headerlink" title="onInterceptTouchEvent()"></a>onInterceptTouchEvent()</h5><p>事件拦截部分主要关注<code>down</code>，和<code>move</code>事件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onInterceptTouchEvent</span><span class="params">(MotionEvent event)</span> </span>&#123;</div><div class="line">    <span class="keyword">final</span> <span class="keyword">int</span> action = MotionEventCompat.getActionMasked(event);</div><div class="line">    <span class="keyword">switch</span> (action) &#123;</div><div class="line">         <span class="keyword">case</span> MotionEvent.ACTION_DOWN:</div><div class="line">        	 <span class="keyword">if</span> (STATUS.isSwipingToRefresh(mStatus) || STATUS.isReleaseToRefresh(mStatus)</div><div class="line">                    || STATUS.isSwipingToLoadMore(mStatus) || STATUS.isReleaseToLoadMore(mStatus)) &#123;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">               </div><div class="line">            &#125;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> MotionEvent.ACTION_MOVE:</div><div class="line"> <span class="keyword">boolean</span> moved = Math.abs(yInitDiff) &gt; Math.abs(xInitDiff)</div><div class="line">                    &amp;&amp; Math.abs(yInitDiff) &gt; mTouchSlop;</div><div class="line">            <span class="keyword">boolean</span> triggerCondition =</div><div class="line">                    (yInitDiff &gt; <span class="number">0</span> &amp;&amp; moved &amp;&amp; onCheckCanRefresh()) ||</div><div class="line">                            (yInitDiff &lt; <span class="number">0</span> &amp;&amp; moved &amp;&amp; onCheckCanLoadMore());</div><div class="line">            <span class="keyword">if</span> (triggerCondition) &#123;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">super</span>.onInterceptTouchEvent(event);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>关于手势的拦截是这样处理的，如果是<code>down</code>事件，会判断当前的状态，只要是正在下拉，上拉，松开下拉，松开上拉时，将<code>down</code>事件拦截。如果是<code>moev</code>事件，会判断滑动的有效性并且检查<code>mTargetView</code>此时是否具备滑动能力，来判断是否将事件拦截掉。当<code>mTargetView</code>在顶部或者滑动到底部，此时在相应方向上无法再滑动，事件就被容器布局接收处理。</p>
+<h5 id="onTouchEvent"><a href="#onTouchEvent" class="headerlink" title="onTouchEvent()"></a>onTouchEvent()</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onTouchEvent</span><span class="params">(MotionEvent event)</span> </span>&#123;</div><div class="line">    <span class="keyword">final</span> <span class="keyword">int</span> action = MotionEventCompat.getActionMasked(event);</div><div class="line"></div><div class="line">    <span class="keyword">switch</span> (action) &#123;</div><div class="line">        <span class="keyword">case</span> MotionEvent.ACTION_MOVE:</div><div class="line">            <span class="keyword">if</span> (Math.abs(xDiff) &gt; Math.abs(yDiff) &amp;&amp; Math.abs(xDiff) &gt; mTouchSlop) &#123;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (STATUS.isStatusDefault(mStatus)) &#123;</div><div class="line">                <span class="keyword">if</span> (yDiff &gt; <span class="number">0</span> &amp;&amp; onCheckCanRefresh()) &#123;</div><div class="line">                    mRefreshCallback.onPrepare();</div><div class="line">                    setStatus(STATUS.STATUS_SWIPING_TO_REFRESH);</div><div class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (yDiff &lt; <span class="number">0</span> &amp;&amp; onCheckCanLoadMore()) &#123;</div><div class="line">                    mLoadMoreCallback.onPrepare();</div><div class="line">                    setStatus(STATUS.STATUS_SWIPING_TO_LOAD_MORE);</div><div class="line">                &#125;</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (STATUS.isRefreshStatus(mStatus)) &#123;</div><div class="line">                <span class="keyword">if</span> (mTargetOffset &lt;= <span class="number">0</span>) &#123;</div><div class="line">                    setStatus(STATUS.STATUS_DEFAULT);</div><div class="line">                    fixCurrentStatusLayout();</div><div class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">                &#125;</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (STATUS.isLoadMoreStatus(mStatus)) &#123;</div><div class="line">                <span class="keyword">if</span> (mTargetOffset &gt;= <span class="number">0</span>) &#123;</div><div class="line">                    setStatus(STATUS.STATUS_DEFAULT);</div><div class="line">                    fixCurrentStatusLayout();</div><div class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="keyword">if</span> (STATUS.isRefreshStatus(mStatus)) &#123;</div><div class="line">                <span class="keyword">if</span> (STATUS.isSwipingToRefresh(mStatus) || STATUS.isReleaseToRefresh(mStatus)) &#123;</div><div class="line">                    <span class="keyword">if</span> (mTargetOffset &gt;= mRefreshTriggerOffset) &#123;</div><div class="line">                        setStatus(STATUS.STATUS_RELEASE_TO_REFRESH);</div><div class="line">                    &#125; <span class="keyword">else</span> &#123;</div><div class="line">                        setStatus(STATUS.STATUS_SWIPING_TO_REFRESH);</div><div class="line">                    &#125;</div><div class="line">                    fingerScroll(yDiff);</div><div class="line">                &#125;</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (STATUS.isLoadMoreStatus(mStatus)) &#123;</div><div class="line">                <span class="keyword">if</span> (STATUS.isSwipingToLoadMore(mStatus) || STATUS.isReleaseToLoadMore(mStatus)) &#123;</div><div class="line">                    <span class="keyword">if</span> (-mTargetOffset &gt;= mLoadMoreTriggerOffset) &#123;</div><div class="line">                        setStatus(STATUS.STATUS_RELEASE_TO_LOAD_MORE);</div><div class="line">                    &#125; <span class="keyword">else</span> &#123;</div><div class="line">                        setStatus(STATUS.STATUS_SWIPING_TO_LOAD_MORE);</div><div class="line">                    &#125;</div><div class="line">                    fingerScroll(yDiff);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">super</span>.onTouchEvent(event);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>手势事件处理的部分主要来看<code>move</code>事件。滑动核心逻辑都在于此。</p>
+<p><img src="http://i2.muimg.com/567571/c17f070a447d3c26.png" alt=""></p>
+<p>这里先搞清楚定义的几个状态。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isRefreshStatus</span><span class="params">(<span class="keyword">final</span> <span class="keyword">int</span> status)</span> </span>&#123;</div><div class="line">           <span class="keyword">return</span> status &lt; STATUS.STATUS_DEFAULT;</div><div class="line">  &#125;</div><div class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isLoadMoreStatus</span><span class="params">(<span class="keyword">final</span> <span class="keyword">int</span> status)</span> </span>&#123;</div><div class="line">           <span class="keyword">return</span> status &gt; STATUS.STATUS_DEFAULT;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p>0为默认状态，负值统称为刷新状态，正值统称为加载更多状态。</p>
+<p>在<code>onTouchEvent</code>中判断也分为三个部分。</p>
+<p><img src="http://i1.piimg.com/567571/06f607f8b7cca03f.png" alt=""></p>
+<p>首先判断当前是默认的正常状态时，监听手指在y轴上的移动距离并判断当前在<code>mTaegetView</code>顶部或者底部时，表明此时<code>SwipeToLoadLayout</code>应该接收这个事件去做刷新或者加载。回调<code>onPrepare()</code>，并把状态设为正在下拉或者正在上拉。</p>
+<p><img src="http://i2.muimg.com/567571/a27251787d7b4800.png" alt=""></p>
+<p>第二层判断就是是否处于下拉。如果滑动的距离超过<code>mHeaderView</code>的高度时，将状态设为<code>STATUS.RELEASE_TO_REFRESH</code>。并执行<code>fingerScroll(dDiff)</code>，这个方法就是view滑动核心放啊。</p>
+<p><img src="http://i1.piimg.com/567571/8ecb71806bd59cd8.png" alt=""></p>
+<p>第三层与第二层完全一样，不再赘述。</p>
+<p>最后需要看的就是<code>fingerScroll(yDiff)</code>，通过它，三个view在手势的移动中，不断进行<code>layout</code>来确定位置。</p>
+<p><img src="http://i2.muimg.com/567571/323dfea2cb5410dd.png" alt=""></p>
+<p>回调<code>onMove</code>，进入<code>updateScroll(yScrolled)</code>。</p>
+<p><img src="http://i2.muimg.com/567571/9b29184d045fcd45.png" alt=""></p>
+<p>此时可以看的到是，将<code>mTargetView</code>赋值后，又调用了<code>layoutChildren()</code>。也就是在<code>onLayout()</code>中也调用过的。跟到这里也就明白了，<code>SwipeToLoadLayout</code>的原理所在，就是抓取手势的下拉和上拉事件，并记录<code>mTargetOffSet</code>，不断重新对<code>mHeaderView</code>，<code>mTargetView</code>，<code>mFooterView</code>进行位置确定实现的。</p>
+<h5 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h5><p>这一套代码理解起来其实难度不大，只要多打几个Log就能轻松理解。但是基于对GitHub上关于刷新的库来看，很多都做的并不是特别好，有的是继承自<code>ViewGroup</code>，实现了下拉刷新，但是没有实现加载功能。有的是把刷新和加载的视图放到<code>RecyclerView</code>的<code>ItemType</code>里。虽然能够实现功能，但是总觉得很不优雅。基于此，当我发现了<code>SwipeToLoadLayout</code>这个库的时候，十分欣喜。于是，有了这一篇源码的记录。</p>
+
+          
+        
+      
     </div>
-</header>
-
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            
-                <div class="post-preview">
-    <a href="/2017/04/12/SwipeToLoadLayout/">
-        <h2 class="post-title">
-            SwipeToLoadLayout
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2017-04-12
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2017/04/09/QQZone-HotFix/">
-        <h2 class="post-title">
-            QQZone_HotFix
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2017-04-09
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2017/04/08/AndFix/">
-        <h2 class="post-title">
-            AndFix
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2017-04-08
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2017/04/04/vlayout/">
-        <h2 class="post-title">
-            vlayout
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2017-04-04
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2017/03/19/float/">
-        <h2 class="post-title">
-            CSS中浮动知识理解
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2017-03-19
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2017/03/11/js中标准的原型式继承写法/">
-        <h2 class="post-title">
-            js中标准的原型式继承写法
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2017-03-11
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2017/03/09/js中的对象创建方式/">
-        <h2 class="post-title">
-            js中的对象创建方式
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2017-03-09
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2017/03/08/对js中闭包的理解/">
-        <h2 class="post-title">
-            对js中闭包的理解
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2017-03-08
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2017/03/06/demo/">
-        <h2 class="post-title">
-            demo
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2017-03-06
-    </p>
-</div>
-<hr>
-            
-
-            <ul class="pager">
     
     
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liuhaoer.github.io/2017/04/09/QQZone-HotFix/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liuhao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘昊的技术博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/04/09/QQZone-HotFix/" itemprop="url">QQZone_HotFix</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-09T12:11:41+08:00">
+                2017-04-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="QQZone热修复方案"><a href="#QQZone热修复方案" class="headerlink" title="QQZone热修复方案"></a>QQZone热修复方案</h3><p>把修复好的dex和含有bug的dex放入数组中，把修复好的dex放在数组最前面。</p>
+<p>类在加载时，从第一个dex中就可以找到修复好的类。</p>
+<h5 id="存在的问题：CLASS-ISPREVERIFIED"><a href="#存在的问题：CLASS-ISPREVERIFIED" class="headerlink" title="存在的问题：CLASS_ISPREVERIFIED"></a>存在的问题：CLASS_ISPREVERIFIED</h5><p>例如:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</div><div class="line"> 	<span class="function"><span class="keyword">public</span> <span class="title">A</span><span class="params">()</span></span>&#123;</div><div class="line">      B b = <span class="keyword">new</span> B();</div><div class="line"> 	&#125; </div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span></span>&#123; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果A类B类在同一个dex中，在A类的某些方法中引用了B类，在虚拟机启动进行类校验的时候，A类就会被打上CLASS_ISPREVERIFIED的标志。</p>
+<p>当我们发现B类中存在bug时，我们修改后重新打一个dex。</p>
+<p>当加载这个新的dex中的B类时，会报错。因为A类已经被打上了CLASS_ISPREVERIFIED的标志，这时候如果A类再引用其他dex中的类，就会报错。</p>
+<p><code>我们要解决的问题是防止A类被打上CLASS_ISPREVERIFIED的标志。</code></p>
+<blockquote>
+<p>QQZone的解决方案是，在每个类的构造函数中，加入System.out.println(AntilazyLoad.class);这样每个类都会引用一个独立的dex中类，就不会被打上CLASS_ISPREVERIFIED的标志。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liuhaoer.github.io/2017/04/08/AndFix/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liuhao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘昊的技术博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/04/08/AndFix/" itemprop="url">AndFix</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-08T09:39:46+08:00">
+                2017-04-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="Android热修复技术之AndFix"><a href="#Android热修复技术之AndFix" class="headerlink" title="Android热修复技术之AndFix"></a>Android热修复技术之AndFix</h5><p>目前市面上大概有三类Android热修复流派，第一个是是阿里支付宝团队开发的AndFix，其二是QQ空间团队提出的超级补丁方案，具体实现有Nuwa，第三类就是去年下半年微信团队刚刚开源的Tinker。这一篇主要记录AndFix的接入过程。</p>
+<h5 id="接入："><a href="#接入：" class="headerlink" title="接入："></a>接入：</h5><ul>
+<li><p>Gradle依赖：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.alipay.euler:andfix:0.5.0@aar'</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>自定义Application</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Application</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String TAG = <span class="string">"euler"</span>;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String APATCH_PATH = <span class="string">"/out.apatch"</span>;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * patch manager</div><div class="line">     */</div><div class="line">    <span class="keyword">private</span> PatchManager mPatchManager;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate();</div><div class="line">        <span class="comment">// initialize</span></div><div class="line">        mPatchManager = <span class="keyword">new</span> PatchManager(<span class="keyword">this</span>);</div><div class="line">        mPatchManager.init(<span class="string">"1.0"</span>);</div><div class="line">       </div><div class="line">        <span class="comment">// load patch</span></div><div class="line">        mPatchManager.loadPatch();</div><div class="line">        </div><div class="line">        <span class="comment">// add patch at runtime</span></div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            <span class="comment">// .apatch file path</span></div><div class="line">            String patchFileString = Environment.getExternalStorageDirectory()</div><div class="line">                    .getAbsolutePath() + APATCH_PATH;</div><div class="line">            mPatchManager.addPatch(patchFileString);</div><div class="line">            Log.d(TAG, <span class="string">"apatch:"</span> + patchFileString + <span class="string">" added."</span>);</div><div class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">            Log.e(TAG, <span class="string">""</span>, e);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>编写一个存在bug的方法用来实验：‘</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> TextView textView;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line">        textView = (TextView) findViewById(R.id.text);</div><div class="line">        showInfo();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">showInfo</span><span class="params">()</span> </span>&#123;</div><div class="line">       textView.setText(<span class="string">"这是一个存在严重bug的APK"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>将这个APK签名后打包安装手机上为：</p>
+<p><img src="http://i4.buimg.com/567571/65f5ac0a58818457.png" alt=""></p>
+</li>
+<li><p>修改代码并重新打包</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">showInfo</span><span class="params">()</span> </span>&#123;</div><div class="line"> 	textView.setText(<span class="string">"这是一个成功修复后的APK"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>生成apatch包</p>
+<p>现在我们就有了两个APK，一个包含bug的APK和一个修复完成的APK。那么我们就可以使用阿里提供的差分包生成工具生成apatch包了。</p>
+<p><img src="http://i1.piimg.com/567571/2c34b2bd1fa86619.png" alt=""></p>
+<p>其中，-o为apatch包生成目录，-k为签名文件，-p和-e为密码，-a为秘钥别名。成功之后，命令行中会告诉我们修改了哪个类中的哪个方法。现在我们进入指定生成apatch包的out目录。</p>
+<p><img src="http://i2.muimg.com/567571/d9efa3d8228244e3.png" alt=""></p>
+<p>第三个就是我们需要的apatch包，将它重命名为程序中写死的名称out.apatch。放入SDCard根目录。</p>
+</li>
+<li><p>再次打开应用，apatch已经加载生效</p>
+<p><img src="http://i1.piimg.com/567571/e2781c5f27289b20.png" alt=""></p>
+<p>至此，就走通了整个修复流程，实现了不用重新发布版本安装新APK，就可以紧急修复线上bug的问题</p>
+<p>​</p>
+<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>AndFix集成比较容易，且有生成apatch包的命令行工具，使用起来没有什么难度。但是AndFix仅仅只支持修复类中的方法。不能修改成员变量或者资源文件等操作。所以阿里将它定位为紧急修复线上bug的方案，对开发者来说不失为一种可以考虑的选型。</p>
+</li>
 </ul>
-        </div>
+
+          
+        
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liuhaoer.github.io/2017/04/04/vlayout/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liuhao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘昊的技术博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/04/04/vlayout/" itemprop="url">vlayout</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-04T17:44:25+08:00">
+                2017-04-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="VLayout库实践"><a href="#VLayout库实践" class="headerlink" title="VLayout库实践"></a>VLayout库实践</h5><p>VLayout是阿里开源的一套基于动态化构建布局的实现方式，起源于电商业务灵活的运营需求。利用这个库，我们也可以用来很容易实现复杂的页面布局，并可通过服务端，动态配置界面展现逻辑。类似手淘，天猫等电商App首页。</p>
+<p><img src="http://i4.buimg.com/567571/b1e4026ff4003065.png" alt=""></p>
+<p>类似这种复杂的首页，不是说不能实现，而是实现起来的确很麻烦。可以考虑使用RecyclerView的ItemType来解决，但是一旦类型较多，就给我们写Adapter带来很大的困扰。而且还要考虑服务端返回的JSON结构。最重要的是，我们无法掌握Item回收复用的效果。基于此，使用VLayout来解决这个问题成为我们可以作为技术选型的一种方案。</p>
+<p>这里我直接给出使用VLayout模仿美团外卖首页的实现效果：</p>
+<p><img src="http://i2.muimg.com/567571/794df805b53fd78f.png" alt=""></p>
+<p><code>当然，这里要说明的是美团外卖这个首页还比较简单，属于比较正常的首页展现形式。我们可以使用多类型或者addHeaderView的方式来解决，但是为了适应复杂的首页场景，还是非常推荐使用VLayout。故以此举例。</code></p>
+<h6 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> RecyclerView recyclerView;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line">        recyclerView = (RecyclerView) findViewById(R.id.list);</div><div class="line"></div><div class="line">        VirtualLayoutManager manager = <span class="keyword">new</span> VirtualLayoutManager(<span class="keyword">this</span>);</div><div class="line">        recyclerView.setLayoutManager(manager);</div><div class="line"></div><div class="line">        DelegateAdapter delegateAdapter = <span class="keyword">new</span> DelegateAdapter(manager);</div><div class="line"></div><div class="line">        recyclerView.setAdapter(delegateAdapter);</div><div class="line"></div><div class="line">        RecyclerView.RecycledViewPool recycledViewPool = <span class="keyword">new</span> RecyclerView.RecycledViewPool();</div><div class="line">        recycledViewPool.setMaxRecycledViews(<span class="number">0</span>,<span class="number">10</span>);</div><div class="line">        recyclerView.setRecycledViewPool(recycledViewPool);</div><div class="line"></div><div class="line">        delegateAdapter.addAdapter(<span class="keyword">new</span> VAdapter1(<span class="keyword">this</span>));</div><div class="line"></div><div class="line">        delegateAdapter.addAdapter(<span class="keyword">new</span> VAdapter2(<span class="keyword">this</span>));</div><div class="line">        delegateAdapter.addAdapter(<span class="keyword">new</span> VAdapter3(<span class="keyword">this</span>));</div><div class="line">        delegateAdapter.addAdapter(<span class="keyword">new</span> VAdapter4(<span class="keyword">this</span>));</div><div class="line">        delegateAdapter.addAdapter(<span class="keyword">new</span> VAdapter5(<span class="keyword">this</span>));</div><div class="line">        delegateAdapter.addAdapter(<span class="keyword">new</span> VAdapter6(<span class="keyword">this</span>));</div><div class="line">        </div><div class="line">        delegateAdapter.notifyDataSetChanged();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h6 id="more"><a href="#more" class="headerlink" title="more"></a>more</h6><p><a href="https://github.com/alibaba/vlayout" target="_blank" rel="external">https://github.com/alibaba/vlayout</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liuhaoer.github.io/2017/03/19/float/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liuhao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘昊的技术博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/19/float/" itemprop="url">CSS中浮动知识理解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-19T19:53:38+08:00">
+                2017-03-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="CSS中关于浮动的学习"><a href="#CSS中关于浮动的学习" class="headerlink" title="CSS中关于浮动的学习"></a>CSS中关于浮动的学习</h5><p>对初学者来说，浮动相较于CSS中的其他知识是一个比较不容易弄清楚的内容。而掌握浮动又是我们在做网页布局的时候，无法避免的技术。今天下午对浮动进行了一下全面的学习，在此做一下总结。</p>
+<p>首先在CSS中，我们用<code>float</code>属性来表示，支持两种值：<code>left</code>,<code>right</code>。</p>
+<h6 id="浮动的盒子会脱离文档标准流"><a href="#浮动的盒子会脱离文档标准流" class="headerlink" title="浮动的盒子会脱离文档标准流"></a>浮动的盒子会脱离文档标准流</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line">        .content &#123;</div><div class="line">			height: 350px;</div><div class="line">		&#125;</div><div class="line">      	.box1 &#123;</div><div class="line">          	width:100px;</div><div class="line">          	height:100px;</div><div class="line">          	background: yellow;</div><div class="line">          	float: left;</div><div class="line">      	&#125;</div><div class="line">      	.box2 &#123;</div><div class="line">          	width:150px;</div><div class="line">          	height:150px;</div><div class="line">          	background:red;</div><div class="line">      	&#125;</div><div class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></div><div class="line">    		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box1"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>这段代码在浏览器中显示为：</p>
+<p><img src="http://p1.bpimg.com/567571/95d9ab2c57cadf3e.png" alt="&#39;"></p>
+<p><code>我们可以得出第一个结论：浮动的盒子会脱离文档标准流。box1左浮动以后，它原来的位置会被box2占据，这样box2就变成了文档标准流中的第一个元素。</code></p>
+<h6 id="浮动的盒子会互相贴靠"><a href="#浮动的盒子会互相贴靠" class="headerlink" title="浮动的盒子会互相贴靠"></a>浮动的盒子会互相贴靠</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line">        .content &#123;</div><div class="line">			height: 350px;</div><div class="line">		&#125;</div><div class="line">      	.box1 &#123;</div><div class="line">          	width:100px;</div><div class="line">          	height:100px;</div><div class="line">          	background: yellow;</div><div class="line">          	float: left;</div><div class="line">      	&#125;</div><div class="line">      	.box2 &#123;</div><div class="line">          	width:150px;</div><div class="line">          	height:150px;</div><div class="line">          	background: red;</div><div class="line">          	float: left;</div><div class="line">      	&#125;</div><div class="line">      <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></div><div class="line">    		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box1"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>在浏览器中效果为：</p>
+<p><img src="http://p1.bpimg.com/567571/9959919b37ec93c1.png" alt=""></p>
+<p><code>box1和box2都设置了左浮动以后，box1会向父元素的边框挤，box2会向box1的右边缘挤。故浮动的盒子会互相贴靠。</code></p>
+<h5 id="文字围绕"><a href="#文字围绕" class="headerlink" title="文字围绕"></a>文字围绕</h5><p>其实在最早期，浮动最早用来做文字围绕效果的，我们可以通过下面的案例来体会：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line">		img &#123;</div><div class="line">			width: 540px;</div><div class="line">			height: 258px;</div><div class="line">			float: left;</div><div class="line">		&#125;</div><div class="line">		span &#123;</div><div class="line">			color: red;</div><div class="line">		&#125;</div><div class="line">		p &#123;</div><div class="line">			background: blue;</div><div class="line">		&#125;</div><div class="line">      <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    	<span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    		<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"logo.png"</span>&gt;</span></div><div class="line">    	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    	<span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">    		<span class="tag">&lt;<span class="name">span</span>&gt;</span>开始位置<span class="tag">&lt;/<span class="name">span</span>&gt;</span> 百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度百度</div><div class="line">    	<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>浏览器中效果为:</p>
+<p><img src="http://i1.piimg.com/567571/e7b935d2b41a63dd.png" alt=""></p>
+<p>这里需要注意的是，我们仅仅给图片所在的盒子设置了左浮动，文字所在的盒子占据图片所在的位置，<code>但是文字内容却并没有被遮挡</code>。利用这一特性，我们就可以很轻松的实现文字环绕的效果。</p>
+<h6 id="浮动的行内元素能够设置宽高"><a href="#浮动的行内元素能够设置宽高" class="headerlink" title="浮动的行内元素能够设置宽高"></a>浮动的行内元素能够设置宽高</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line">		span &#123;</div><div class="line">			color:white ;</div><div class="line">			float: left;</div><div class="line">			width: 50px;</div><div class="line">			height: 50px;</div><div class="line">			background: green;</div><div class="line">			margin-left: 10px;</div><div class="line">			text-align: center;</div><div class="line">			line-height: 50px;</div><div class="line">		&#125;</div><div class="line">      <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    	<span class="tag">&lt;<span class="name">span</span>&gt;</span>1<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    	<span class="tag">&lt;<span class="name">span</span>&gt;</span>2<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    	<span class="tag">&lt;<span class="name">span</span>&gt;</span>3<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    	<span class="tag">&lt;<span class="name">span</span>&gt;</span>4<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    	<span class="tag">&lt;<span class="name">span</span>&gt;</span>5<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>在浏览器中效果为：</p>
+<p><img src="http://p1.bqimg.com/567571/d64afe3c36000f46.png" alt=""></p>
+<p>以上就是关于浮动的几个特性，但是浮动也会带来一些问题，也就给我们引入了清除浮动的话题。这里捎带提一下，关于如何清除浮动 ，下次再做总结。</p>
+<p><code>浮动造成的一切元素错乱问题的本质就是：浮动的父元素高度缺失。</code>我们只要试想一下就可以明白，父元素在没有设置高度时，是由子元素的高度撑起来的，然而如果子元素设置了浮动的话，那么这些子元素就会在标准流中被删除，父元素固然就不能子元素被撑开，导致标签结构的错乱。这也给我们解决清除浮动带来了一个方案：<code>给浮动的元素的父元素手动设定高度。</code></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liuhaoer.github.io/2017/03/11/js中标准的原型式继承写法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liuhao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘昊的技术博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/11/js中标准的原型式继承写法/" itemprop="url">js中标准的原型式继承写法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-11T21:54:52+08:00">
+                2017-03-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="js中标准的原型式继承写法"><a href="#js中标准的原型式继承写法" class="headerlink" title="js中标准的原型式继承写法"></a>js中标准的原型式继承写法</h5><p>在JavaScript中，继承是通过原型来实现的，而并不像Java等其他语言有如extends关键字。在JavaScript中，原型，原型对象，原型链都是比较重要且不容易理解的概念。所以这篇主要用来记录一下标准的原型式继承的写法。</p>
+<p>直接上代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">People</span>(<span class="params">name,age,sex</span>)</span>&#123;</div><div class="line">  <span class="keyword">this</span>.name = name;</div><div class="line">  <span class="keyword">this</span>.age = age;</div><div class="line">  <span class="keyword">this</span>.sex = sex;</div><div class="line">&#125;</div><div class="line"></div><div class="line">People.prototype.shwoInfo()&#123;</div><div class="line">  alert(<span class="string">'My name is'</span>+<span class="keyword">this</span>.name);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name,age,sex,schoolName,number</span>)</span>&#123;</div><div class="line">  People.apply(<span class="keyword">this</span>,<span class="built_in">arguments</span>);</div><div class="line">  <span class="keyword">this</span>.schoolName = schoolName;</div><div class="line">  <span class="keyword">this</span>.number = number;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 关键代码</span></div><div class="line">Student.prototype = <span class="keyword">new</span> People();</div><div class="line">Student.prototype.doHomework = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  alert(<span class="string">'do homework...'</span>);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> student = <span class="keyword">new</span> Student(<span class="string">'xiaoming'</span>,<span class="number">9</span>,<span class="string">'男'</span>,<span class="string">'朝阳小学'</span>,<span class="number">20170001</span>);</div><div class="line">student.showInfo();</div><div class="line">student.doHomework();</div></pre></td></tr></table></figure>
+<p>其中，只有一行核心代码：</p>
+<p><code>Student.prototype = new People();</code></p>
+<p>在测试过程中，发现这样写也是可行的：</p>
+<p><code>Student.protoytpe = People.prototype;</code></p>
+<p>由于目前对原型的认识还比较粗浅，尚且不做具体分析。留待日后继续学习。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liuhaoer.github.io/2017/03/09/js中的对象创建方式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liuhao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘昊的技术博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/09/js中的对象创建方式/" itemprop="url">js中的对象创建方式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-09T21:47:34+08:00">
+                2017-03-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="js中的对象创建方式"><a href="#js中的对象创建方式" class="headerlink" title="js中的对象创建方式"></a>js中的对象创建方式</h5><p>在js中创建对象有多种方式，在这里稍作总结。</p>
+<ul>
+<li><p>字面量：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> people = &#123;</div><div class="line">  <span class="attr">name</span>:<span class="string">"xiaoming"</span>,</div><div class="line">  <span class="attr">age</span>:<span class="number">18</span>,</div><div class="line">  <span class="attr">sex</span>:<span class="string">"男"</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>这种方式是最直观的对象创建方式，且这种创建方式的对象封装性体现较好，在实际开发中使用这种方式较多。而且这种对象和JSON格式相似。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> people = &#123;</div><div class="line">  <span class="string">"name"</span>:<span class="string">"xiaoming"</span>,</div><div class="line">  <span class="string">"age"</span>:<span class="number">18</span>,</div><div class="line">  <span class="string">"sex"</span>:<span class="string">"男"</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>可以看出，它们唯一的区别就是JSON数据的key必须<code>加引号</code>。</p>
+</li>
+<li><p>Object：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> people = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">people.name = <span class="string">"xiaoming"</span>;</div><div class="line">people.age = <span class="number">18</span>;</div><div class="line">people.sex = <span class="string">"男"</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>构造函数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">People</span>(<span class="params">name,age,sex</span>)</span>&#123;</div><div class="line">  <span class="keyword">this</span>.name = name;</div><div class="line">  <span class="keyword">this</span>.age = age;</div><div class="line">  <span class="keyword">this</span>.sex = sex;</div><div class="line"><span class="keyword">var</span> people = <span class="keyword">new</span> People(<span class="string">"xiaoming"</span>,<span class="number">18</span>,<span class="string">"男"</span>);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>需要注意的是，JavaScript并不是一个面向对象的语言，而是一个基于对象的语言。在JavaScript中，并没有类的概念。所以，并不存在如Java中有创建类的过程。</p>
+<p>下面看几个例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Mobile</span>(<span class="params">brand,memory,price</span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> m = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">  m.brand = brand;</div><div class="line">  m.memory = memory;</div><div class="line">  m.price = price;</div><div class="line">  <span class="keyword">return</span> m;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> m1 = <span class="keyword">new</span> Mobile(<span class="string">"小米"</span>,<span class="number">4</span>,<span class="number">1999</span>);</div><div class="line"><span class="keyword">var</span> m2 = Mobile(<span class="string">"小米"</span>,<span class="number">4</span>,<span class="number">1999</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(m1);</div><div class="line"><span class="built_in">console</span>.log(m2);</div></pre></td></tr></table></figure>
+<p>上面两种方式，一个通过new关键字创建，一个通过直接调用函数创建，得到的结果是一样的，殊途同归。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Mobile</span>(<span class="params">price</span>)</span>&#123;</div><div class="line">  <span class="keyword">this</span>.price = price;</div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.price);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> m = <span class="keyword">new</span> Mobile(<span class="number">1999</span>);</div></pre></td></tr></table></figure>
+<p>在创建对象后，控制台会输出price。这里需要说明的是，在JavaScript中，构造函数中的代码也是顺序执行的，这点跟普通函数一样。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liuhaoer.github.io/2017/03/08/对js中闭包的理解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liuhao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘昊的技术博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/08/对js中闭包的理解/" itemprop="url">对js中闭包的理解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-08T21:52:23+08:00">
+                2017-03-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="通过几个实例程序对js中闭包的理解"><a href="#通过几个实例程序对js中闭包的理解" class="headerlink" title="通过几个实例程序对js中闭包的理解"></a>通过几个实例程序对js中闭包的理解</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span></span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">inner</span></span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(a);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> inner;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> inn = outer();</div><div class="line">inn();			<span class="comment">//a=1</span></div></pre></td></tr></table></figure>
+<p>这段代码是最经典闭包案例。我们在全局作用域中实现了对嵌套函数inner()的调用，以及容器函数outer()作用域中变量a的访问。</p>
+<p>上述代码还有几种写法如下:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span></span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">  <span class="keyword">var</span> inner = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(a);</div><div class="line">  &#125;;</div><div class="line">  <span class="keyword">return</span> inner;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> inn = outer();</div><div class="line">inn();      <span class="comment">//a=1</span></div></pre></td></tr></table></figure>
+<p>这种写法看上去更容易理解，在outer函数中，我们将嵌套函数引用返回出去，这样我们就能在全局作用域中访问。</p>
+<p>终极写法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span></span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(a);</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> inn = outer();</div><div class="line">inn();		<span class="comment">//a=1</span></div></pre></td></tr></table></figure>
+<p>以上几种写法表达的都是一个意思。</p>
+<p>再看一个demo:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> inner;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">  inner = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(a);</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line">outer();</div><div class="line">inner();	<span class="comment">//a=1</span></div></pre></td></tr></table></figure>
+<p>通过这个例子，我们可以更加清晰的看到，声明在外层作用域中的函数引用inner居然可以访问到outer()中的变量a。看起来跟js中作用域的规则背道而驰。</p>
+<p>end:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span>(<span class="params">a</span>)</span>&#123;</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">inner</span>(<span class="params">b</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(a+b);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> inner;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> inn = outer(<span class="number">2</span>);</div><div class="line">inn(<span class="number">3</span>);	<span class="comment">//result=5</span></div></pre></td></tr></table></figure>
+<p>在这里借用别人对闭包的总结，理解起来十分贴切：</p>
+<blockquote>
+<p>每个函数都是一个闭包，无论它在何处被调用，<code>它总是能访问它定义时所处作用域中的全部变量。</code></p>
+<p>闭包天生存在，并不需要什么特殊的结构才存在。只不过我们必须要刻意地把函数放到其他的作用域中调用才能明显的观察到闭包性质。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liuhaoer.github.io/2017/03/06/demo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liuhao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘昊的技术博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/06/demo/" itemprop="url">demo</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-06T18:59:37+08:00">
+                2017-03-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="测试从公司的mac迁移到自己的电脑上。"><a href="#测试从公司的mac迁移到自己的电脑上。" class="headerlink" title="测试从公司的mac迁移到自己的电脑上。"></a>测试从公司的mac迁移到自己的电脑上。</h5>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="liuhao" />
+          <p class="site-author-name" itemprop="name">liuhao</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">liuhao</span>
 </div>
 
 
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
 
-    <!-- Footer -->
-    <hr />
-
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                    
-
-                    
-
-                    
-                        <li>
-                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    
-
-                    
-
-                    
-
-                    
-                </ul>
-                <p class="copyright text-muted">&copy; 2017 liuhao<br></p>
-                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
-                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
-            </div>
-        </div>
-    </div>
-</footer>
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
 
 
-    <!-- After footer scripts -->
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
     
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
 
-<!-- Bootstrap -->
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </div>
 
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+  
 
-<!-- Disqus Comments -->
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
 
 
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 </body>
-
 </html>
